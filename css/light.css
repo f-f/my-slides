@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
+
+body {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-weight: 300;
+}
+h1, h2, h3, h4 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5em;
+}
+h1 { font-size: 4.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.2em; }
+li{
+  list-style-type: square;
+}
+li p { line-height: 1.25em; }
+.red { color: #fa0000; }
+.large { font-size: 2em; }
+a, a > code {
+  color: #0099CF;
+  text-decoration: none;
+}
+code {
+  -moz-border-radius: 5px;
+  -web-border-radius: 5px;
+  background: #e7e8e2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ p {
+  clear: both;
+}
+#slideshow .slide .content code {
+  font-size: 0.8em;
+}
+#slideshow .slide .content pre code {
+  font-size: 0.9em;
+  padding: 15px;
+}
+.light {
+  background: #f3f3f3;
+  color: #272822;
+  text-shadow: 0 0 0.3em #999;
+}
+.light h1, .light h2 {
+  color: #272822;
+  line-height: 0.8em;
+}
+
+/* Slide-specific styling */
+#slide-light .footnote {
+  bottom: 12px;
+  left: 20px;
+}
+#slide-how .slides {
+  font-size: 0.9em;
+  position: absolute;
+  top:  151px;
+  right: 140px;
+}
+#slide-how .slides h3 {
+  margin-top: 0.2em;
+}
+#slide-how .slides .first, #slide-how .slides .second {
+  padding: 1px 20px;
+  height: 90px;
+  width: 120px;
+  -moz-box-shadow: 0 0 10px #777;
+  -webkit-box-shadow: 0 0 10px #777;
+  box-shadow: 0 0 10px #777;
+}
+#slide-how .slides .first {
+  background: #fff;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+}
+#slide-how .slides .second {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+}
+
+
+/* Title-text layout */
+.title {
+  width: 100%;
+  float: left;
+}
+
+.text {
+  color: #777;
+  width: calc(100% - 3em);
+  float: left;
+  padding-top: 0;
+  padding-left: 3em;
+  margin: 0;
+}
+.text h3, .text h4{
+  margin-top: 0.6em;
+}
+.text:last-of-type, .text:last-child {
+  color: #000;
+}
+.footnote {
+  position: absolute;
+  bottom: 4em;
+  left: 3em;
+  font-weight: 400;
+  width: calc(100% - 5em);
+  letter-spacing: -0.05em;
+}
+
+.sign {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em;
+  width: 100%;
+  background: #f3f3f3;
+  font-weight: 400;
+}
+.course {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  font-weight: 400;
+}

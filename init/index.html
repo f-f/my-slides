@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Linux Init Systems</title>
+    <link rel="stylesheet" href="../css/light.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+name: light
+layout: true
+class: center, middle, light
+---
+
+#Init Systems
+##Corsi Linux Avanzati 2013/2014
+###Fabrizio Ferrai
+
+```html
+fabrizio.ferrai@gmail.com
+```
+
+###<img src="../img/poul.logo.png" alt="POuL Logo" style="height: 4em; margin-top: 2em;">
+---
+layout:false
+template:light
+##Dove trovate queste slides:
+```html
+	http://init.ferrai.tk
+```
+
+###<br/>Disclaimer
+####Questo sarà un talk abbastanza teorico, per cui non entrerò nel dettaglio se non quando necessario, tuttavia darò per scontate alcune cose (e.g. cosa è un BIOS o cosa è un processo). Siete caldamente invitati perciò ad approfondire gli argomenti trattati (Un elenco di 'Fonti e Approfondimenti' si trova nell'ultima slide, ma non esitate a chiedere.)
+
+---
+
+name: sign
+layout: true
+.sign[[Fabrizio Ferrai](http://ferrai.tk)]
+.course[Corsi Linux Avanzati 13/14]
+---
+
+name:argomenti
+.title[
+  ##Argomenti di oggi:
+]
+???
+
+##Queste sono le domande principali delle quali ci occuperemo
+--
+.text[###Cosa è un Init System?]
+--
+.text[###Di cosa si occupa?]
+---
+
+template:light
+layout:false
+##Facciamo un passo indietro...
+---
+
+template: sign
+layout: true
+---
+
+name:bootstrapping
+.title[
+  ##Bootstrapping (Booting)
+]
+--
+.text[###Consiste in tutta quella serie di operazioni che, a partire dalla macchina spenta, ha come risultato finale l'avvio del **Sistema Operativo**]
+--
+.text[###Il flusso di controllo della macchina durante il boot (avvio) passa dal BIOS al bootloader al kernel]
+---
+
+name:bootdetail1
+.title[
+  ##Il boot nel dettaglio 1/2
+]
+--
+.text[###Il boot di Linux si articola attraverso 5 fasi:]
+--
+.text[####1. Il BIOS effettua delle operazioni specifiche per la piattaforma hardware della macchina]
+--
+.footnote[**[1]** A seconda delle politiche del bootloader viene utilizzata anche una fase 1.5... (e.g. GRUB può leggere il filesystem per localizzare la Fase 2)]
+.text[####2. Una volta che l'hardware è stato riconosciuto e inizializzato correttamente, il BIOS esegue il programma di boot dal dispositivo di boot prescelto. Questo programma contiene la **Fase 1** del Linux bootloader; essa poi carica la **Fase 2**, che è il grosso del bootloader. **[1]**]
+---
+
+name:bootdetail2
+.title[
+  ##Il boot nel dettaglio 2/2
+]
+.text[####3. Spesso il bootloader presenta un menù di scelta, associato a un timeout. Una volta effettuata la scelta il bootloader **carica il kernel**, che si decomprime e mette in atto le funzioni di sistema essenziali, preparandosi alla fase successiva]
+???
+##3. Funzioni come hardware di base e memory paging
+##4. interrupts, memory management, device and driver initialization
+--
+.text[####4. *start_kernel()* viene quindi chiamata, ed effettua la maggior parte del setup del sistema, prima di lanciare separatamente il processo **idle**, lo **scheduler** e il processo **init** (il primo a essere eseguito **in user space**)]
+--
+.text[####5. Il processo init esegue gli script necessari alla creazione dell'ambiente utente (...)]
+---
+
+template:light
+layout:false
+##What Init System does? 
+---
+
+name:wisd
+.title[
+  ##What Init System does?
+]
+.text[###Avvia/Riavvia il computer]
+--
+.text[###Termina l'avvio una volta che è stato caricato il kernel]
+--
+.text[###Avvia altri programmi (tipicamente "daemons"). <br/>*e.g.: Server Grafico, Webserver, etc.*]
+---
+
+.title[##Demoni]
+.text[###Etimologia:]
+--
+.text[####“I demoni sono personaggi della mitologia greca, alcuni dei quali eseguivano compiti di cui gli dei non potevano occuparsi” - *Wikipedia*]
+--
+.text[###In un sistema operativo:]
+--
+.text[####Un demone è un applicazione che viene eseguita in **background**, anzichè stare sotto il diretto controllo dell'utente.]
+???
+##In a multitasking environment
+--
+.text[####Tipicamente offre un **servizio** o si occupa periodicamente di alcuni task, e per questo rimane aperto a lungo nel sistema.]
+---
+
+.title[##"Luke, sono tuo padre" (cit.)]
+.text[###Init è l'unico antenato comune di tutti i processi presenti nel sistema: essendo il primo processo ad essere avviato, da lui nascono tutti gli altri]
+--
+.text[###Inoltre ha il compito di 'adottare' tutti i processi che rimangono 'orfani' nel sistema a causa della terminazione del loro padre (In Linux tutti i processi, tranne init, devono avere un padre)]
+---
+
+.title[##Affidabilità]
+.text[###Init **DEVE** essere affidabile, perchè:]
+--
+.text[###1. Gira in modalità super utente]
+--
+.text[###2. Controlla servizi di sistema critici]
+--
+.text[###3. Ha PID 1. Quindi se muore --> Il sistema va in Kernel Panic]
+---
+
+aaaa
+---
+
+name:fonti
+.title[##Fonti e approfondimenti:]
+
+- http://en.wikipedia.org/wiki/Linux_startup_process
+- http://en.wikipedia.org/wiki/Bootstrapping
+- http://en.wikipedia.org/wiki/Init
+
+    </textarea>
+    <script src="../js/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="../js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark'
+        }) ;
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46402862-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

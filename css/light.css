@@ -29,19 +29,28 @@ a, a > code {
   text-decoration: none;
 }
 code {
+  float:left;
   -moz-border-radius: 5px;
   -web-border-radius: 5px;
   background: #e7e8e2;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
+  width: 80%;
+  margin-left: 10%;
 }
 .pull-left {
   float: left;
-  width: 47%;
+  width: 52%;
+  margin-left: 3em;
 }
 .pull-right {
   float: right;
-  width: 47%;
+  width: 40%;
+}
+.pull-top{
+  position: absolute;
+  top: 6em;
+  left: 50%;
 }
 .pull-right ~ p {
   clear: both;
@@ -63,41 +72,6 @@ code {
   line-height: 0.8em;
 }
 
-/* Slide-specific styling */
-#slide-light .footnote {
-  bottom: 12px;
-  left: 20px;
-}
-#slide-how .slides {
-  font-size: 0.9em;
-  position: absolute;
-  top:  151px;
-  right: 140px;
-}
-#slide-how .slides h3 {
-  margin-top: 0.2em;
-}
-#slide-how .slides .first, #slide-how .slides .second {
-  padding: 1px 20px;
-  height: 90px;
-  width: 120px;
-  -moz-box-shadow: 0 0 10px #777;
-  -webkit-box-shadow: 0 0 10px #777;
-  box-shadow: 0 0 10px #777;
-}
-#slide-how .slides .first {
-  background: #fff;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  z-index: 1;
-}
-#slide-how .slides .second {
-  position: relative;
-  background: #fff;
-  z-index: 0;
-}
-
 
 /* Title-text layout */
 .title {
@@ -105,16 +79,20 @@ code {
   float: left;
 }
 
-.text {
+.text{
   color: #777;
   width: calc(100% - 3em);
   float: left;
   padding-top: 0;
-  padding-left: 3em;
   margin: 0;
 }
-.text h3, .text h4{
+.text h3{
   margin-top: 0.6em;
+  padding-left: 2em;
+}
+.text h4{
+  margin-top: 0.6em;
+  padding-left: 4em;
 }
 .text:last-of-type, .text:last-child {
   color: #000;
@@ -127,7 +105,13 @@ code {
   width: calc(100% - 5em);
   letter-spacing: -0.05em;
 }
-
+.center{
+  text-align: center;
+}
+.little{
+  font-size: 0.8em;
+  margin-left: 1em;
+}
 .sign {
   position: absolute;
   bottom: 0;

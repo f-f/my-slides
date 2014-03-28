@@ -318,7 +318,21 @@ name:upstart
 - Sabayon Linux
 - ...
 ]
+---
 
+name:brace
+template: light
+layout:false
+class: center
+###<img src="img/brace.jpg" alt="Brace" style="height: 14em;">
+---
+
+name:sysd
+template: light
+layout:false
+class: center
+<img src="img/sysd1.jpg" alt="sysd1" style="height: 15.75em;">
+<img src="img/sysd2.jpg" alt="sysd2" style="height: 15.75em;">
 ---
 
 template:light
@@ -326,14 +340,39 @@ layout:false
 ##systemd
 ---
 
-.title[##Systemd]
+.title[##Systemd - Overview]
+--
+.text[###È un manager di sistema e di servizi per Linux]
+--
+.text[###Compatibile con SysV e LSB scripts]
+--
+.text[###Lennart Poettering e Kay Sievers (Red Hat) sono gli autori (e attuali manutentori)]
+---
+
+.title[##Systemd - Caratteristiche]
+--
+.text[####Compatibile esclusivamente con Linux]
+--
+.text[####Parallelizzazione totale e comunicazione tramite D-Bus/Socket]
+--
+.text[####Avvio OnDemand]
+--
+.text[####Mantiene i punti di Mount/Automount]
+--
+.text[####Tiene traccia dei processi tramite CGROUPs]
+
+
+
 ---
 
 aaaa
 ---
 
 name:finished
-.center[###<img src="img/success.jpg" alt="Success!" style="height: auto;">]
+template: light
+layout:false
+class: center
+###<img src="img/success.jpg" alt="Success!" style="height: 12em;">
 ---
 
 name:fonti
@@ -349,10 +388,13 @@ name:fonti
 - http://en.wikipedia.org/wiki/Linux_kernel_API
 - http://en.wikipedia.org/wiki/Launchd
 - http://en.wikipedia.org/wiki/Upstart
+- http://en.wikipedia.org/wiki/D-Bus
 - http://en.wikipedia.org/wiki/Systemd
 - http://www.freedesktop.org/wiki/Software/systemd/
 - https://www.linux.com/learn/tutorials/524577-here-we-go-again-another-linux-init-intro-to-systemd
 - https://www.linux.com/learn/tutorials/527639-managing-services-on-linux-with-systemd
+- http://0pointer.de/blog/projects/why.html
+- http://www.jonmasters.org/blog/2011/04/29/response-to-why-systemd/
 
 
     </textarea>

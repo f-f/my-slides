@@ -6,7 +6,7 @@
     <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
     <title>Linux Init Systems</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/light.css"/>
+    <link rel="stylesheet" href="css/comiclight.css"/>
   </head>
   <body>
     <textarea id="source">
@@ -242,7 +242,7 @@ reboot
 shutdown
 killall
 poweroff
-telinit   # serve per cambiare runlevel (...)
+tellinit  # serve per cambiare runlevel (...)
 sulogin
 wall      # per mandare un warning su tutte le tty
 ```
@@ -461,25 +461,11 @@ name:servicecontrol1
 --
 
 ```bash
-$ /etc/init.d/$nomeServizio start
+$ /etc/init.d/$service start
 
-$ /etc/init.d/$nomeServizio stop
+$ /etc/init.d/$service stop
 
-$ /etc/init.d/$nomeServizio restart
-```
----
-
-name:servicecontrol2
-.title[##Controllo manuale dei servizi (Pt.2)]
-.text[###Esiste anche un comando specifico per controllare i servizi:]
---
-
-```bash
-$ service $nomeServizio start
-
-$ service $nomeServizio stop
-
-$ service $nomeServizio restart
+$ /etc/init.d/$service restart
 ```
 ---
 
@@ -495,8 +481,6 @@ name:sysvdis
 .title[##SysVInit: svantaggi]
 --
 .text[####**Sequenziale**: prestazioni non ottimali a causa del parallelismo non sfruttato]
---
-.little[.text-left[*(In realtà Debian utilizza una versione modificata di SysV, dotata di parallelismo)*]]
 --
 .text[####**Server centric**: i riavvii sui server dovrebbero essere rari, quindi rapidità nel boot non prioritaria]
 --
@@ -569,6 +553,20 @@ expect fork
 respawn
 
 exec cron
+```
+---
+
+name:servicecontrol2
+.title[##Controllo manuale dei servizi (Pt.2)]
+.text[###Su Upstart è ancora più semplice controllare i servizi:]
+--
+
+```bash
+$ service $nomeServizio start
+
+$ service $nomeServizio stop
+
+$ service $nomeServizio restart
 ```
 ---
 
@@ -659,7 +657,7 @@ name:fonti
 .title[##Fonti e approfondimenti:]
 
 - http://en.wikipedia.org/wiki/Linux_startup_process
-- https://www.debian.org/doc/manuals/debian-reference/ch03.en.html
+- http://en.wikipedia.org/wiki/Bootstrapping
 - http://en.wikipedia.org/wiki/Init
 - http://wiki.gentoo.org/wiki/Comparison_of_init_systems
 - http://en.wikipedia.org/wiki/UNIX_System_V

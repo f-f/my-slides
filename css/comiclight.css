@@ -3,13 +3,20 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,100);
 
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family:"ComicSansProW99-Regular";
+  src: local('Comic Sans'), url("http://fast.fonts.net/dv2/3/866072e1-6c20-4f0c-99ac-c39a03c7c391.woff?d44f19a684109620e484147fa790e81859e92aaaea3d337f84586d5df8888fe5455f55e0f83ed0be044ddfaa95e824a4b1318d5b552aaa24a44025e9&projectid=74f39a9d-a5dc-405f-9690-1c1fd4590ae4") format("woff");
+}
+
 body {
-  font-family: 'Open Sans';
-  font-size: 20px;
+  font-family: 'ComicSansProW99-Regular';
+  font-size: 19px;
   font-weight: 300;
 }
 h1, h2, h3, h4 {
-  font-family: 'Open Sans';
+  font-family: 'ComicSansProW99-Regular';
   font-weight: 300;
   letter-spacing: -0.05em;
   margin-bottom: 0.5em;
@@ -54,11 +61,6 @@ code {
 }
 .pull-right ~ p {
   clear: both;
-}
-.text-left {
-  float: left;
-  width: 90%;
-  margin-left: 6em;
 }
 #slideshow .slide .content code {
   font-size: 0.8em;

@@ -168,7 +168,7 @@ name:reliability
 
 name:kernelpanic
 .title[##Kernel Panic]
-.center[###<img src="img/kernelpanic.jpg" alt="KP" style="height: 16em;">]
+.center[###<img src="img/panic-kernel.gif" alt="KP" style="width: 100%;">]
 ---
 
 template:light
@@ -242,7 +242,7 @@ reboot
 shutdown
 killall
 poweroff
-telinit   # serve per cambiare runlevel (...)
+telinit   # serve per cambiare runlevel (più dettagli a breve...)
 sulogin
 wall      # per mandare un warning su tutte le tty
 ```
@@ -267,7 +267,7 @@ init
 rc
 init.d script
 rc.d script
-SystemStarter (Mac OS X)
+SystemStarter (Mac OS X) #gestisce i demoni
 inetd / xinetd
 crond / atd
 ```
@@ -292,7 +292,7 @@ name:upstart
 .text[###Comunicazione attraverso D-Bus]
 ---
 
-.title[##Default init system nelle principali distro]
+.title[##Default init system nelle principali distribuzioni]
 --
 .pull-left[
 ###SysVInit
@@ -365,20 +365,21 @@ name:sysdcaratt
 .text[###Tiene traccia dei processi tramite CGROUPs]
 ---
 
-name:sysd
-template: light
-layout:false
-class: center
-<img src="img/sysd1.jpg" alt="sysd1" style="height: 15.75em;">
-<img src="img/sysd2.jpg" alt="sysd2" style="height: 15.75em;">
----
-
 name:parallel
 template: light
 layout:false
 class: center
 ###<img src="img/parallelization.png" alt="Parallel" style="width: 100%;">
 Source: systemd slides
+---
+
+name:sysd
+template: light
+layout:false
+class: center
+<img src="img/sysd1.jpg" alt="sysd1" style="height: 15.75em;">
+<img src="img/sysd2.jpg" alt="sysd2" style="height: 15.75em;">
+.title[###Systemd punta a rimpiazzare tutto...]
 ---
 
 template:light
@@ -506,7 +507,7 @@ name:sysvdis
 ---
 
 name:upstartconf1
-.title[##Upstart: configurazione 1/2]
+.title[##Upstart: configurazione (1)]
 --
 .text[###Jobs]
 --
@@ -515,6 +516,19 @@ name:upstartconf1
 .text[####**Service Job**: rimane avviato in background a meno che non venga fermato esplicitamente]
 --
 .text[####**Abstract Job**: non ha sezioni exec, né un PID, ma può essere avviato/fermato]
+---
+
+name:upstartconf2
+.title[##Upstart: configurazione (2)]
+.text[###**Events**: ci sono 3 tipi di eventi su Upstart:]
+--
+.text[####**Segnali**: Asincroni: chi lancia l’evento non aspetta che venga accettato da tutti]
+--
+.text[####**Metodi**: Sincroni: si comportano come chiamate a funzione]
+--
+.text[####**Hooks**: Job speciali: simili ai segnali, ma sincroni]
+--
+.text[####Esempio: *starting* e *stopping*]
 ---
 
 name:upstartfiles
@@ -537,26 +551,16 @@ description "questo è uno scaffold di job astratto"
 ```
 ---
 
-name:upstartconf2
-.title[##Upstart: configurazione 2/2]
-.text[###**Events**: ci sono 3 tipi di eventi su Upstart:]
+name:cron
+.title[##Cron]
 --
-.text[####**Segnali**: Asincroni: chi lancia l’evento non aspetta che venga accettato da tutti]
---
-.text[####*initctl emit --no-wait SIGNAL*]
---
-.text[####**Metodi**: Sincroni: si comportano come chiamate a funzione]
---
-.text[####*initctl emit METHOD*]
---
-.text[####**Hooks**: Job speciali: simili ai segnali, ma sincroni]
---
-.text[####Esempio: *starting* e *stopping*]
+.text[###**Cron** è un demone per pianificare l'esecuzione di determinati "lavori" (jobs) in modo pianificato, su base temporale]
 ---
 
 name:cronconfig
-.title[##Configuration example]
-.text[###In Upstart, la configurazione di cron sta in **meno di dieci righe**]
+.title[##Configuration example: Cron]
+--
+.text[###In Upstart, la configurazione di cron è questa:]
 --
 
 ```bash
@@ -590,11 +594,11 @@ name:sysdconf2
 .title[##Systemd: Units (2)]
 .text[####**Automount**: punto di automount, che ha un corrispondente mount]
 --
+.text[####**Swap**: per controllare i devices di swap allo stesso modo in cui vengono controllati i mount]
+--
 .text[####**Target**: usata per raggruppare logicamente altre unità, di per se non fa nulla, ma referenzia altre unità]
 --
 .text[####**Snapshot**: come i *target* non fa nulla, ma referenzia altre unità; usata per salvare/ripristinare lo stato dell'init system]
---
-.text[####**Swap**: per controllare i devices di swap allo stesso modo in cui vengono controllati i mount]
 --
 .text[####**Timer**: per avviare servizi su base temporale, come cron]
 ---
@@ -603,7 +607,7 @@ name:sysdconf3
 .title[##Systemd: Units (3)]
 .text[####**Path**: codifica informazioni riguardo un path monitorato da systemd, per le path-based activations]
 --
-.text[####**Scope**: queste unità non sono configurate tramite files, ma sono create durante l'esecuzione tramite l'interfaccia bus di systemd; raggruppano worker processes per una migliore gestione delle risorse]
+.text[####**Scope**: queste unità non sono configurate tramite files, ma sono create durante l'esecuzione tramite l'interfaccia bus di systemd; raggruppano insiemi di processi di sistema per una migliore gestione delle risorse]
 --
 .text[####**Slice**: utilizzata per gestire le risorse di un gruppo di processi in modo gerarchico]
 ---

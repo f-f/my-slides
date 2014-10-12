@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>Linux Desktop Environments</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/light.css"/>
+    <link rel="stylesheet" href="css/progressjs.min.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+name: light
+layout: true
+class: center, middle, light
+---
+
+#Gli Ambienti Grafici
+##Corsi Linux 14/15
+###Fabrizio Ferrai
+
+```html
+fabrizio.ferrai@gmail.com
+```
+
+###<img src="img/poul.logo.png" alt="POuL Logo" style="height: 4em; margin-top: 2em;">
+---
+layout:false
+template:light
+##Dove trovate queste slides:
+```html
+	http://de.ferrai.tk
+```
+
+####<br/><br/><br/>Attenzione:
+##FATE DOMANDE!
+
+---
+
+name: sign
+layout: true
+.sign[[Fabrizio Ferrai](http://ferrai.tk)]
+.course-right[Corsi Linux 14/15 - [POuL](https://poul.org)]
+---
+
+name:argomenti
+.title[
+  ##Argomento di oggi:
+]
+
+--
+.text[# Gli Ambienti Grafici <br/>su Linux]
+--
+.text[####(Desktop Environments)]
+
+---
+
+template:light
+layout:false
+##...Ambienti cosa?
+---
+
+template: sign
+layout: true
+---
+
+name:windows
+.title[##Windows]
+.center[###<img src="img/windows8.jpg" alt="win8" style="width: 100%;">]
+---
+
+name:osx
+.title[##OS X]
+.center[###<img src="img/osx.jpg" alt="osx" style="width: 100%;">]
+---
+
+name:linux
+.title[##Linux: ehm.]
+.center-rand1[###<img src="img/cinnamon.png" alt="lin1" style="width: 80%;">]
+--
+.center-rand2[###<img src="img/gnome3.png" alt="lin2" style="width: 80%;">]
+--
+.center-rand3[###<img src="img/kde5.png" alt="lin3" style="width: 60%;">]
+--
+.center-rand4[###<img src="img/unity.png" alt="lin4" style="width: 90%;">]
+--
+.center-rand5[###<img src="img/pantheon.png" alt="lin5" style="width: 80%;">]
+---
+
+name:graphicstack
+.title[##Lo stack grafico (semplificato. TANTO.)]
+.brick1[###Applications]
+--
+.brick2[###Window Manager]
+--
+.brick3[###Graphic Server (Xorg)]
+--
+.brick4[###Linux Kernel (drivers)]
+---
+
+name:whysomany
+.title[
+  ##Perché così tanti?
+]
+--
+.text[###- Perché si può.]
+--
+.text[###- Perché nascono per soddisfare esigenze diverse]
+--
+.text[###- ...e nascono in tempi diversi]
+---
+
+template:light
+layout:false
+##Orientiamoci.
+---
+
+name:unity
+.title[##Unity]
+.center[###<img src="img/unity.png" alt="unity" style="width: 100%;">]
+---
+
+name:unitydesc
+.title[##Unity]
+--
+.text[###Pro:]
+--
+.text[####Sviluppato molto attivamente (sostenuto da Canonical)]
+--
+.text[####Look and feel molto curato ed esperienza omogenea]
+--
+.text[####Maturo e completo]
+--
+.text[###Contro:]
+--
+.text[####Poco personalizzabile]
+--
+.text[####Pesante]
+---
+
+name:kde4
+.title[##KDE]
+.center[###<img src="img/kde4.png" alt="kde4" style="width: 100%;">]
+---
+
+name:kde
+.title[##KDE 4]
+--
+.text[###Pro:]
+--
+.text[####Suite di applicazioni completissima]
+--
+.text[####Probabilmente il più maturo dei Desktop Environment]
+--
+.text[####Personalizzabile fino all'ultimo pixel]
+--
+.text[####Comunità molto forte]
+--
+.text[###Contro:]
+--
+.text[####Mastodontico. (E applicazioni instabili)]
+--
+.text[####Pesante. TANTO.]
+---
+
+name:kde5
+.title[##(KDE 5)]
+.center[###<img src="img/kde5.png" alt="kde5" style="width: 80%;">]
+---
+
+name:gnome3
+.title[##GNOME 3]
+.center[###<img src="img/gnome3.png" alt="gnome3" style="width: 100%;">]
+---
+
+name:gnome3desc
+.title[##GNOME 3]
+--
+.text[###Pro:]
+--
+.text[####Sviluppato molto attivamente (sostenuto da Red Hat)]
+--
+.text[####Suite di applicazioni completa ed esperienza omogenea]
+--
+.text[####Minimale]
+--
+.text[###Contro:]
+--
+.text[####Troppo minimale.]
+--
+.text[####Non molto interesse verso la community]
+--
+.text[####Tradeoff usabilità-adattamento a nuovi formati]
+---
+
+name:xfce
+.title[##XFCE]
+.center[###<img src="img/xfce.png" alt="xfce" style="width: 100%;">]
+---
+
+name:xfcedesc
+.title[##XFCE]
+--
+.text[###Pro:]
+--
+.text[####Minimale]
+--
+.text[####Totalmente compatibile con GNOME]
+--
+.text[####Personalizzabile e usabile]
+--
+.text[####Leggero]
+--
+.text[###Contro:]
+--
+.text[####Community non molto attiva]
+--
+.text[####Limitato]
+---
+
+name:lxde
+.title[##LXDE]
+.center[###<img src="img/lxde.png" alt="lxde" style="width: 100%;">]
+---
+
+name:lxdedesc
+.title[##LXDE]
+--
+.text[###Pro:]
+--
+.text[####Minimale]
+--
+.text[####Leggerissimo]
+--
+.text[####Lo sviluppo ha subito un'accelerazione ultimamente]
+--
+.text[###Contro:]
+--
+.text[####Brutto.]
+---
+
+name:ubunturicapitol
+.title[##Li troviamo tutti impacchettati con Ubuntu:]
+--
+.text[###<img src="img/ubuntu-logo.png" alt="" style="width: 5%; margin-right: 0.5em;">Ubuntu => Unity]
+--
+.text[###<img src="img/kubuntu-logo.png" alt="" style="width: 5%; margin-right: 0.5em;">Kubuntu => KDE]
+--
+.text[###<img src="img/ubuntu-gnome-logo.png" alt="" style="width: 5%; margin-right: 0.5em;">Ubuntu-gnome => GNOME3]
+--
+.text[###<img src="img/xubuntu-logo.png" alt="" style="width: 5%; margin-right: 0.5em;">Xubuntu => XFCE]
+--
+.text[###<img src="img/lubuntu-logo.png" alt="" style="width: 5%; margin-right: 0.5em;">Lubuntu => LXDE]
+---
+
+name:install
+.title[##Come installarli]
+.center[###<img src="img/kde-install.jpg" alt="inst" style="width: 100%;">]
+---
+
+template:light
+layout:false
+##Ma ce n'è qualcun altro degno di nota ancora...
+---
+
+name:mate
+.title[##MATE]
+.center[###<img src="img/mate.png" alt="mate" style="width: 100%;">]
+---
+
+name:matedesc
+.title[##MATE]
+--
+.text[###Pro:]
+--
+.text[####Stabile e testato]
+--
+.text[####Molto usabile]
+--
+.text[####Leggero]
+--
+.text[####Suite di applicazioni completa]
+--
+.text[###Contro:]
+--
+.text[####Vecchio]
+--
+.text[####Non molto supportato (solo Mint)]
+---
+
+name:cinnamon
+.title[##Cinnamon]
+.center[###<img src="img/cinnamon.png" alt="cinnamon" style="width: 100%;">]
+---
+
+name:cinndesc
+.title[##Cinnamon]
+--
+.text[###Pro:]
+--
+.text[####Facile da usare e configurare per le esigenze base]
+--
+.text[####Abbastanza leggero]
+--
+.text[####Molto diffuso]
+--
+.text[###Contro:]
+--
+.text[####In caso di configurazioni più complesse di quella base è molto delicato]
+--
+.text[####Supporto non dei migliori]
+---
+
+name:pantheon
+.title[##Pantheon]
+.center[###<img src="img/pantheon.png" alt="pantheon" style="width: 100%;">]
+---
+
+name:panthdesc
+.title[##Pantheon]
+--
+.text[###Pro:]
+--
+.text[####Si, sono d'accordo, è bellissimo]
+--
+.text[####Molto leggero]
+--
+.text[####Minimale e poco personalizzabile]
+--
+.text[####Molta cura per il design e l'usabilità]
+--
+.text[###Contro:]
+--
+.text[####Poche applicazioni integrate]
+--
+.text[####Poco maturo e in forte sviluppo]
+---
+
+
+name:finished
+template: light
+layout:false
+class: center
+###<img src="img/success.jpg" alt="Success!" style="height: 12em;">
+---
+
+name:cc
+template: light
+layout:false
+class: center
+##Grazie per l'attenzione!
+###<img src="img/ccbysa.png" alt="" style="width: 30%;">
+####Queste slides sono licenziate Creative Commons<br> Attribution-ShareAlike 3.0 Unported
+
+  https://www.poul.org
+
+    </textarea>
+    <script src="js/progress.min.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+      }) ;
+      $('.remark-slide-number').hide()
+      var progbar = progressJs(".remark-slides-area");
+      progbar.start();
+      slideshow.on('showSlide', function (slide) {
+        var total = $('.remark-slide-number').html().split(" / ")[1]
+        progbar.set(slide.getSlideNo()/total*100);
+      });
+    });
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46402862-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

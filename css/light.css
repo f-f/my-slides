@@ -132,3 +132,81 @@ code {
   left: 50%;
   font-weight: 400;
 }
+
+.course-right {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  font-weight: 400;
+}
+
+
+/* Five random image positions. */
+.center-rand1{
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: -1%;
+}
+.center-rand2{
+  text-align: center;
+  position: absolute;
+  top: 21%;
+  left: 5%;
+}
+.center-rand3{
+  text-align: center;
+  position: absolute;
+  top: 14%;
+  left: 0%;
+}
+.center-rand4{
+  text-align: center;
+  position: absolute;
+  top: 19%;
+  left: 20%;
+}
+.center-rand5{
+  text-align: center;
+  position: absolute;
+  top: 16%;
+  left: 10%;
+}
+
+/*Four bricks for stacked visualizations*/
+.brick1{
+  text-align: center;
+  background-color: #aaeeff;
+  height: 5em;
+  width: 60%;
+  margin-left: 20%;
+  border: 1px solid grey;
+  display: block;
+}
+.brick2{
+  text-align: center;
+  background-color: #FFEE88;
+  height: 5em;
+  width: 70%;
+  margin-left: 15%;
+  border: 1px solid grey;
+  display: block;
+}
+.brick3{
+  text-align: center;
+  background-color: #88FF88;
+  height: 5em;
+  width: 74%;
+  margin-left: 13%;
+  border: 1px solid grey;
+  display: block;
+}
+.brick4{
+  text-align: center;
+  background-color: #FF8888;
+  height: 5em;
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid grey;
+  display: block;
+}

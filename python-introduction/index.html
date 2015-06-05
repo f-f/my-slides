@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../../css/reveal.css">
+    <link rel="stylesheet" href="../../css/theme/night.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../../../../lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
+				<section	data-markdown data-separator="^\n---\n$"
+						data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+
+
+<!-- .slide: data-background="#ffffff" -->
+
+<img src="img/banner.gif" alt="Banner" style="width: 80%; border: 0; box-shadow: none;">
+<img src="img/logo-black.svg" alt="Politecnico Open unix Labs Logo" style="width: 50%; border: 0; box-shadow: none; margin-top: 3em;">
+
+---
+
+# [poul.org](https://poul.org)
+<iframe src="https://poul.org" frameborder="0" width="100%" height="500px"></iframe>
+
+---
+
+# Calendario
+
+* 11 Giugno: introduzione al linguaggio
+* 18 Giugno: Python all'opera: real-world applications
+
+---
+
+# Introduzione
+
+--
+
+## Programmare
+### Perché?
+
+- creare <!-- .element: class="fragment" -->
+- siamo circondati da software <!-- .element: class="fragment" -->
+- dare ordini alle macchine <!-- .element: class="fragment" -->
+
+**automatizzare** <!-- .element: class="fragment" -->
+
+--
+
+### Come
+- tramite i <!-- .element: class="fragment" --> *linguaggi di programmazione*
+- diversi livelli di astrazione: più o meno vicino alla macchina <!-- .element: class="fragment" -->
+
+--
+
+## Python
+### Simple and Powerful
+
+<blockquote>
+  &ldquo;Python is an **easy to learn**, powerful programming language.
+  It has efficient high-level data structures and a **simple but effective** approach to object-oriented programming.
+  Python’s **elegant syntax** and **dynamic typing**, together with its interpreted nature, make it an ideal language
+  for scripting and **rapid application development** in many areas on most platforms.&rdquo;
+</blockquote>
+
+--
+
+<img src="img/start.jpeg" alt="Jesus" style="width: 60%;">
+
+--
+
+## Story behind the name
+
+<blockquote>
+  &ldquo;Guido van Rossum, the creator of the Python language, named the language after the BBC show "Monty Python’s
+  Flying Circus". He doesn’t particularly like snakes that kill animals for food by winding their long bodies
+  around them and crushing them.&rdquo;
+</blockquote>
+
+--
+
+## TODO: installazione
+
+--
+
+## L'interprete
+
+```bash
+$ python3
+Python 3.4.2 (default, Oct  8 2014, 10:45:20)
+[GCC 4.9.1] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+--
+
+<!-- .slide: data-background="#cc0000" -->
+# Usiamo Python3
+
+--
+
+## Demo time: calcolatrice!
+#### TODO: mettere giu` un programma di cose da fare nella calc
+
+---
+
+# Hello World!
+
+--
+
+## C
+
+```c
+#include<stdio.h>
+
+int main() {
+	printf("Hello World!\n");
+	return 0;
+}
+```
+
+## Java
+
+```
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Goodbye, World!");
+	}
+}
+```
+
+--
+
+<img src="img/fuck.jpeg" alt="Fuckit" style="width: 70%;">
+
+--
+
+
+# Python
+
+```python
+print('Hello World!')
+```
+
+--
+
+<!-- .slide: data-background="http://i.giphy.com/90F8aUepslB84.gif" -->
+
+--
+
+<img src="img/readable.jpeg" alt="Python is readable" style="width: 80%;">
+
+--
+
+## TODO: editor choice
+
+---
+
+# Basics
+
+--
+
+## Commenti
+
+Tutto quello scritto dopo il `#` non viene eseguito
+
+```python
+>>> 1 + 1 # posso scrivere quello che voglio qui
+2
+```
+
+--
+
+## Errori
+
+Succede quando scrivete $^%%@!& *- cioè spesso.* <!-- .element: class="fragment" -->
+
+Segnalati dall'interprete: <!-- .element: class="fragment" -->
+
+```python
+>>> 2 / 0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+``` 
+<!-- .element: class="fragment" -->
+
+--
+
+## Variabili
+
+Associamo dei nomi a dei valori 
+
+e teniamoli da parte per riferirci a loro in modo semplice <!-- .element: class="fragment" -->
+
+```python
+>>> x = 6
+>>> 2 * x
+12
+
+>>> y = x + 4
+>>> y
+10
+```
+<!-- .element: class="fragment" -->
+
+--
+
+
+## Demo!
+#### TODO: decidere cosa fare qui per demo
+
+---
+
+# Funzioni
+
+--
+
+## Cosa sono?
+
+* sequenze di istruzioni <!-- .element: class="fragment" -->
+* con degli ingressi e un'uscita <!-- .element: class="fragment" -->
+
+```python
+>>> abs(-3)
+3
+```
+<!-- .element: class="fragment" -->
+
+```python
+>>> min(3, 4, 2)
+2
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## Demo?
+
+--
+
+## print()
+
+Stampa l'ingresso che gli viene passato
+
+```python
+>>> y = 4.2
+>>> print(y)
+4.2
+```
+
+Supporta più argomenti <!-- .element: class="fragment" -->
+
+```python
+>>> print(10, 1 + 2)
+10 3
+```
+<!-- .element: class="fragment" --> 
+
+---
+
+# Tipi
+
+--
+
+## Stringhe
+
+```python
+>>> s = "Hello"
+
+>>> s + " " + "World"
+"Hello World"
+```
+
+```python
+>>> len("ciao")
+4
+```
+<!-- .element: class="fragment" -->
+
+--
+
+<!-- .slide: data-background="#660099" -->
+## Nota: operazioni tra tipi diversi
+
+A volte si può:
+```python
+>>> "abc " * 2
+'abc abc '
+```
+
+...E a volte no. <!-- .element: class="fragment" -->
+
+```python
+>>> "abc" + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't convert 'int' object to str implicitly
+```
+
+<!-- .element: class="fragment" -->
+
+--
+
+<!-- .slide: data-background="#00aa00" -->
+## Approfondimento: duck typing
+#### TODO
+
+--
+
+## Bool
+
+Informazione di tipo **Vero** o **Falso**
+
+```python
+>>> 2 < 3
+True
+
+>>> 5 + 1 == 3
+False
+
+>>> x = 3 * 2 > len("abc")
+>>> x
+True
+```
+
+--
+
+## Algebra Booleana
+
+con i __Bool__ si possono fare opearazioni
+
+```python
+>>> True and False
+False
+
+>>> (4 < 3) or (1 + 1 == 2)
+True
+
+>>> not (2 < 3)
+False
+```
+
+---
+
+# Strutture di controllo
+
+--
+
+## If
+
+Eseguire istruzioni solo se si verificano certe condizioni
+
+```python
+>>> x = 3
+>>> if x > 2:
+... 	print(x," è maggiore di 2")
+... 	print("e la loro differenza è", x-2)
+...
+3 è maggiore di 2
+e la loro differenza è 1
+```
+
+--
+
+<!-- .slide: data-background="#cc0000" -->
+## Attenzione
+
+Per identificare un blocco di codice si usano __4 spazi__
+
+--
+
+## Demo?
+
+
+
+
+
+
+
+          </script>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="../../lib/js/head.min.js"></script>
+    <script src="../../js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../../plugin/zoom-js/zoom.js', async: true },
+          { src: '../../plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

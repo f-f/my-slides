@@ -152,7 +152,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## C
 
 ```c
-#include<stdio.h>
+#include <stdio.h>
 
 int main() {
 	printf("Hello World!\n");
@@ -217,6 +217,14 @@ Tutto quello scritto dopo il `#` non viene eseguito
 >>> 1 + 1 # posso scrivere quello che voglio qui
 2
 ```
+
+```python
+>>> """Stringa multilinea
+Di solito si usa come commento
+Usato anche per la documentazione
+(maggiori info tra poco)"""
+```
+<!-- .element: class="fragment" -->
 
 --
 
@@ -294,6 +302,28 @@ False
 
 --
 
+## Bool
+
+Assume uno tra questi due valori: `True` o `False`
+
+--
+
+## Numeri
+
+Possono essere `int` o `float`
+
+```python
+>>> x = 3
+>>> type(x)
+<class 'int'>
+>>> y = 3.14
+>>> type(y)
+<class 'float'>
+```
+<!-- .element: class="fragment" -->
+
+--
+
 ## Stringhe
 
 ```python
@@ -303,11 +333,22 @@ False
 "Hello World"
 ```
 
+Informazioni sulle stringhe: <!-- .element: class="fragment" -->
 ```python
 >>> len("ciao")
 4
 ```
 <!-- .element: class="fragment" -->
+
+--
+
+## Liste, Tuple, Dizionari
+
+* Lista: `[4, "abc", 4.3]`
+* Tupla: `(4, "abc", 4.3)`
+* Dizionario: `{"a": 3, "b": 42}`
+
+<!-- .element: class="fragment" --> Ma ne parleremo nel capitolo [__"Strutture Dati"__](#/10)
 
 --
 
@@ -331,19 +372,13 @@ TypeError: Can't convert 'int' object to str implicitly
 
 <!-- .element: class="fragment" -->
 
---
-
-<!-- .slide: data-background="#00aa00" -->
-## Approfondimento: duck typing
-#### TODO
-
 ---
 
 # Strutture di controllo
 
 --
 
-## If
+## `if`
 
 Eseguire istruzioni solo se si verificano certe condizioni
 
@@ -366,7 +401,74 @@ Per identificare un blocco di codice si usano __4 spazi__
 
 --
 
-## Demo?
+## `else`
+
+Si possono eseguire istruzioni anche se la condizione è falsa
+
+```python
+>>> x = 5
+>>> y = 7
+>>> if x == y:
+... 	print("x è già uguale a y")
+... else:
+... 	print("x è diverso da y")
+... 	print("li voglio rendere uguali")
+... 	x = y # assegno il valore di y a x
+...
+x è diverso da y
+li voglio rendere uguali
+>>> x
+7
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## `while`
+
+Eseguire più volte le stesse istruzioni (finchè una condizione è vera)
+
+```python
+>>> x = 0
+>>> while x < 3:
+... 	x = x + 1
+... 	print("ora x vale", x)
+...
+ora x vale 1
+ora x vale 2
+ora x vale 3
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## `for`
+
+Cicli di esecuzione sulle sequenze
+
+```python
+for i in range(1, 5):
+	print i
+```
+
+--
+
+## `break`, `continue`
+
+* `break`: interrompe l'iterazione
+* `continue`: salta all'iterazione successiva
+
+```python
+for i in range(1, 8):
+	if i == 2:
+		continue
+	if i == 6:
+		break
+	print i
+else:
+	print 'The for loop is over'
+```
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -410,6 +512,15 @@ Supporta più argomenti <!-- .element: class="fragment" -->
 10 3
 ```
 <!-- .element: class="fragment" --> 
+
+--
+
+## First things First
+
+```python
+def test():
+	pass
+```
 
 --
 
@@ -509,6 +620,12 @@ Supporta più argomenti <!-- .element: class="fragment" -->
 ---
 
 # Programmazione Orientata agli Oggetti
+
+--
+
+<!-- .slide: data-background="#00aa00" -->
+## Approfondimento: duck typing
+#### TODO
 
 ---
 

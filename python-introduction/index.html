@@ -120,7 +120,11 @@
 
 --
 
-## TODO: installazione
+## Installazione
+
+* [Windows](http://www.howtogeek.com/197947/how-to-install-python-on-windows/) (attenti che questa guida fa riferimento ad una versione passata, la versione attuale è la 3.4.3)
+* [Mac OS X](http://www.macobserver.com/tmo/article/how-to-upgrade-your-mac-to-python-3)
+* Linux: dovrebbe esserci già (digitate "python3" nel terminale).
 
 --
 
@@ -137,12 +141,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 --
 
 <!-- .slide: data-background="#cc0000" -->
-# Usiamo Python3
-
---
-
-## Demo time: calcolatrice!
-#### TODO: mettere giu` un programma di cose da fare nella calc
+# Useremo Python3
 
 ---
 
@@ -194,11 +193,19 @@ print('Hello World!')
 
 --
 
-## TODO: editor choice
+## Editor
+
+Le versioni di Python per Windows e OSX contengono IDLE
+
+<!-- .element: class="fragment" --> Altrimenti: [Notepad++](https://notepad-plus-plus.org/), [Gedit](https://wiki.gnome.org/Apps/Gedit), [Atom](https://atom.io/) 
 
 ---
 
 # Basics
+
+--
+
+## Demo time: calcolatrice!
 
 --
 
@@ -248,56 +255,38 @@ e teniamoli da parte per riferirci a loro in modo semplice <!-- .element: class=
 
 --
 
+## Bool
 
-## Demo!
-#### TODO: decidere cosa fare qui per demo
+Informazione di tipo **Vero** o **Falso**
 
----
+```python
+>>> 2 < 3
+True
 
-# Funzioni
+>>> 5 + 1 == 3
+False
+
+>>> x = 3 * 2 > len("abc")
+>>> x
+True
+```
 
 --
 
-## Cosa sono?
+## Algebra Booleana
 
-* sequenze di istruzioni <!-- .element: class="fragment" -->
-* con degli ingressi e un'uscita <!-- .element: class="fragment" -->
-
-```python
->>> abs(-3)
-3
-```
-<!-- .element: class="fragment" -->
+con i __Bool__ si possono fare operazioni
 
 ```python
->>> min(3, 4, 2)
-2
+>>> True and False
+False
+
+>>> (4 < 3) or (1 + 1 == 2)
+True
+
+>>> not (2 < 3)
+False
 ```
-<!-- .element: class="fragment" -->
-
---
-
-## Demo?
-
---
-
-## print()
-
-Stampa l'ingresso che gli viene passato
-
-```python
->>> y = 4.2
->>> print(y)
-4.2
-```
-
-Supporta più argomenti <!-- .element: class="fragment" -->
-
-```python
->>> print(10, 1 + 2)
-10 3
-```
-<!-- .element: class="fragment" --> 
 
 ---
 
@@ -348,41 +337,6 @@ TypeError: Can't convert 'int' object to str implicitly
 ## Approfondimento: duck typing
 #### TODO
 
---
-
-## Bool
-
-Informazione di tipo **Vero** o **Falso**
-
-```python
->>> 2 < 3
-True
-
->>> 5 + 1 == 3
-False
-
->>> x = 3 * 2 > len("abc")
->>> x
-True
-```
-
---
-
-## Algebra Booleana
-
-con i __Bool__ si possono fare opearazioni
-
-```python
->>> True and False
-False
-
->>> (4 < 3) or (1 + 1 == 2)
-True
-
->>> not (2 < 3)
-False
-```
-
 ---
 
 # Strutture di controllo
@@ -420,10 +374,42 @@ Per identificare un blocco di codice si usano __4 spazi__
 
 --
 
+## Cosa sono?
+
+* sequenze di istruzioni <!-- .element: class="fragment" -->
+* con degli ingressi e un'uscita <!-- .element: class="fragment" -->
+
 ```python
-def ciao():
-	pass
+>>> abs(-3)
+3
 ```
+<!-- .element: class="fragment" -->
+
+```python
+>>> min(3, 4, 2)
+2
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## print()
+
+Stampa l'ingresso che gli viene passato
+
+```python
+>>> y = 4.2
+>>> print(y)
+4.2
+```
+
+Supporta più argomenti <!-- .element: class="fragment" -->
+
+```python
+>>> print(10, 1 + 2)
+10 3
+```
+<!-- .element: class="fragment" --> 
 
 --
 

@@ -557,26 +557,115 @@ def test():
 
 ## Parametri e Argomenti
 
+Valori parametrici che la funzione utilizzerà al suo interno
+
+```python
+def test(a, b):
+	print(a+b)
+```
 
 --
 
 ## Argomenti di default
 
+Se omettiamo un parametro, la funzione userà quello di default
+
+```python
+def say(message, times=1):
+	print(message * times)
+
+say('Hello')
+say('World', 5)
+```
+
 --
 
 ## Keyword arguments
+
+Anzichè passare gli argomenti in ordine, li chiamiamo per nome
+
+```python
+def func(a, b=5, c=10):
+	print('a is', a, 'and b is', b, 'and c is', c)
+
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+```
 
 --
 
 ## Parametri VarArgs
 
+Possiamo scegliere di accettare qualsiasi parametro ci viene passato
+
+```python
+>>> def test(*args, **kwargs):
+... 	print(args, kwargs)
+... 
+>>> test(1,2,3, a=3)
+(1, 2, 3) {'a': 3}
+```
+
 --
 
-## Il return statement
+## Il `return` statement
+
+Tramite il `return` la funzione ci da un risultato
+
+```python
+>>> def test_return(to_print, to_return):
+... 	print(to_print)
+... 	return to_return*6
+... 
+>>> print(test_return("Batman's song:", "nana"))
+Batman's song:
+nananananananananananana
+>>> 
+```
+
+--
+
+<!-- .slide: data-background="http://i.giphy.com/gFYal2EQK5D4Q.gif" -->
+
+--
+
+## Documentazione
+
+<blockquote>
+	**Fact**: passati tre mesi da quando avete scritto un pezzo di codice, 
+	non saprete più cosa fa.
+</blockquote>
+
+--
+
+## That just happened.
+
+<img src="http://i.giphy.com/KGg0DprB70r6g.gif" alt="Another Random Cat" style="width: 60%; border: 0;">
+
+## Docstrings to the rescue! <!-- .element: class="fragment" -->
 
 --
 
 ## Le docstring
+
+```python
+def print_max(x, y):
+	'''Prints the maximum of two numbers.
+	The two values must be integers.'''
+
+	# convert to integers, if possible
+	x = int(x)
+	y = int(y)
+
+	if x > y:
+		print x, 'is maximum'
+	else:
+		print y, 'is maximum'
+
+print_max(3, 5)
+print print_max.__doc__
+```
 
 --
 

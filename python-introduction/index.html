@@ -677,28 +677,49 @@ print print_max.__doc__
 
 --
 
-## Intro
+## Moduli
+
+* Permettono di riutilizzare funzioni che abbiamo definito, in altri programmi che scriveremo
+* Un modulo è semplicemente un file con estensione .py
+* Un modolo può essere importato da un altro programma
+
+```python
+>>> import mio_modulo
+```
 
 --
 
-## I file .pyc
+## `from .. import`
+
+Ci permette di importare soltanto ciò che vogliamo da un modulo:
+
+```python
+>>> from math import sqrt
+>>> sqrt(16)
+4.0
+```
 
 --
 
-## from .. import
+## La variabile `__name__`
+
+* Contiene il nome del modulo
+* È utile per sapere se un modulo è stato importato o se è stato eseguito direttamente
+
+```python
+if __name__ == '__main__':
+	print('Programma eseguito direttamente')
+else:
+	print('Questo modulo è stato importato')
+```
 
 --
 
-## La variabile __name__
+## La funzione `dir`
 
---
-
-## La funzione dir
-
---
-
-## Packages
-
+* Senza argomenti, restituisce la lista dei nomi definiti nel contesto corrente.
+* Con un argomento, elenca tutti i suoi attributi.<br>
+	Per esempio le funzioni, le classi e le variabili definite in un modulo.
 
 ---
 
@@ -708,39 +729,93 @@ print print_max.__doc__
 
 ## Liste
 
---
+```python
+>>> spesa = ['mele', 'pasta']
+>>> spesa.append('fragole')
+>>> spesa[0] = 'pere'
+['pere', 'pasta', 'fragole']
+```
+<!-- .element: class="fragment" --> 
 
-## Introduzione a Oggetti
+- Le liste contengono una sequenza ordinata di oggetti <!-- .element: class="fragment" -->
+- <!-- .element: class="fragment" -->  Sono *mutabili*: possono essere alterate aggiungendo, modificando o rimuovendo elementi
+- Si definiscono separando gli elementi con le virgole e racchiudendoli tra <!-- .element: class="fragment" --> parentesi **quadre**
 
 --
 
 ## Tuple
 
+`(42, "ciao", 3.7)` <!-- .element: class="fragment" -->
+
+- Le tuple vengono usate per contenere insieme più oggetti. <!-- .element: class="fragment" -->
+- Simili alle liste, ma  <!-- .element: class="fragment" --> sono *immutabili*.
+- Si definiscono separando gli elementi con le virgole e racchiudendoli <!-- .element: class="fragment" --> tra parentesi **tonde**.
+
 --
 
 ## Dizionari
+
+- Permettono di associare <!-- .element: class="fragment" --> dei *valori* a delle *chiavi*
+- E di recuperare un determinato valore in maniera efficiente conoscendo la relativa chiave. <!-- .element: class="fragment" -->
+<!-- .element: class="fragment" --> - Sono simili ad una rubrica con cui possiamo recuperare l'email (*valore*) di una persona sapendo solo il suo nome (*chiave*): 
+
+```python
+rubrica = {
+	"Bill Gates": "bill@gat.es",
+	"Richard Stallman": "rms@gnu.org",
+}
+```
+<!-- .element: class="fragment" -->
+<!-- .element: class="fragment" --> Le chiavi devono essere *immutabili*
 
 --
 
 ## Sequenze
 
+- Liste, tuple e stringhe <!-- .element: class="fragment" --> sono *sequenze* 
+- È possibile eseguire determinate operazioni su tutti i tipi di sequenze <!-- .element: class="fragment" -->
+<!-- .element: class="fragment" --> - Le più importanti sono i test di appartenenza (`in` e `not in`) e le operazioni con gli indici
+
+```pyhton
+>>> spesa = ['mela', 'mango', 'carota']
+>>> 'mela' in spesa
+True
+>>> spesa[1]
+'mango'
+```
+<!-- .element: class="fragment" -->
+
 --
 
-## Set
+## Set (o Insiemi)
+
+`{'mela', 'pera', 'banana'}` <!-- .element: class="fragment" -->
+
+- Un set è una <!-- .element: class="fragment" --> collezione *non ordinata* di oggetti senza elementi duplicati.
+- Supportano le operazioni matematiche degli insiemi come unione, intersezione, differenza e differenza simmetrica <!-- .element: class="fragment" -->
+- Si definiscono separando gli elementi con le virgole e racchiudendoli tra <!-- .element: class="fragment" --> parentesi *graffe*
 
 --
 
 ## Riferimenti
 
---
+Quando assegnamo un oggetto ad una variabile, la variabile contiene <!-- .element: class="fragment" --> solo un *riferimento* all'oggetto
+<br>
+e non l'oggetto stesso.
 
-## Approfondimento sulle Stringhe
+Cosa contiene la variabile spesa_a ? <!-- .element: class="fragment" -->
 
+```python
+>>> spesa_a = ['mela', 'mango']
+>>> spesa_b = spesa_a
+>>> spesa_b.append('carota')
+```
+<!-- .element: class="fragment" -->
 
-
----
-
-# Problem Solving
+```python
+['mela', 'mango', 'carota']
+```
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -748,24 +823,155 @@ print print_max.__doc__
 
 --
 
-<!-- .slide: data-background="#00aa00" -->
-## Approfondimento: duck typing
-#### TODO
+## Paradigm shift
+
+- Fino ad ora abbiamo programmato in <!-- .element: class="fragment" --> maniera *procedurale*, ovvero organizzato i nostri programmi in funzioni.
+- Il paradigma procedurale mostra i suoi limiti quando scriviamo programmi sufficientemente grandi e in molti problemi che si possono trattare più facilmente con il <!-- .element: class="fragment" --> paradigma della *Programmazione Orientata agli Oggetti* (OOP)
+- Il paradigma OOP combina dati e funzioni in <!-- .element: class="fragment" -->
+ entitità chiamate *oggetti*.
+
+--
+
+## Classi e Istanze
+
+- Classi e oggetti sono i due concetti principali: <!-- .element: class="fragment" -->
+<!-- .element: class="fragment" --> una **classe** crea un nuovo tipo, mentre gli **oggetti** sono **istanze** di una classe
+- In Python ogni cosa è un oggetto <!-- .element: class="fragment" -->
+- Possiamo usare <!-- .element: class="fragment" -->  le funzioni `type` e `isinstance` per ottenere informazioni sul tipo di un oggetto</li>
+
+```python
+>>> type("ciao")
+str
+>>> isinstance("ciao", str)
+True
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## Field, metodi e attributi
+
+- Gli oggetti possono contenere <!-- .element: class="fragment" --> dati, chiamati **field**
+- E delle funzioni <!-- .element: class="fragment" --> chiamate **metodi** della classe.
+- Un field può appartenere <!-- .element: class="fragment" -->  alla classe (*variabile di classe*) o all'istanza (*variabile d'istanza*).
+- I field e i metodi di una classe <!-- .element: class="fragment" --> nel loro insieme sono detti **attributi** della classe
 
 ---
 
 # Input e Output
 
+--
+
+## I/O
+
+Ci sono casi in cui vogliamo che il nostro programma interagisca con l'utente.
+Per esempio chiedendo di inserire dei valori di ingresso (*input*) all'utente e stampando dei risultati in *output*.
+
+Useremo la funzione `input()` per ricevere dei valori e `print()` per stamparli.
+
+```python
+nome = input("Inserisci il tuo nome: ")
+print("Il tuo nome è", nome)
+```
+
+--
+
+## Formattazione dell'Output
+
+Per formattare l'output nella maniera desiderata <!-- .element: class="fragment" --> spesso la funzione `print() non è sufficiente.
+        
+Possiamo usare i metodi della <!-- .element: class="fragment" --> classe `str` e in particolare `str.format()`
+
+```python
+print('This {food} is {adjective}.'.format(
+	food='spam', adjective='horrible')
+```
+<!-- .element: class="fragment" --> 
+
+--
+
+## Gestione dei File
+
+- La <!-- .element: class="fragment" -->  funzione `open(filename, mode)` ci permette di aprire un file e restituisce un *oggetto file*.
+- Il <!-- .element: class="fragment" --> parametro `mode` ci permette di specificare in che modalità aprire il file (sola lettura, scrittura, etc.).
+- Possiamo interagire con il file tramite i metodi dell'oggetto file (read, readline, write, writeline, close) <!-- .element: class="fragment" --> 
+- Ricordiamoci di chiudere <!-- .element: class="fragment" --> sempre il file una volta finito di usarlo, con il metodo `close`.
+
 ---
 
-# Eccezioni
+# Errori ed Eccezioni
 
----
+--
 
-# Libreria Standard
+## Errori di Sintassi
+
+```python
+>>> while return print('Hello?') # ??????
+SyntaxError: invalid syntax
+```
+
+- Sono i più comuni da commettere per chi sta imparando Python :-) <!-- .element: class="fragment" -->
+- Accadono quando scriviamo una istruzione in <!-- .element: class="fragment" --> maniera *sintatticamente* errata
+- L'interprete Python non riesce a capirne il significato e quindi non può eseguirla <!-- .element: class="fragment" -->
 
 
+--
 
+## Eccezioni
+
+- Rappresentano l'accadimento di <!-- .element: class="fragment" --> situazioni *eccezionali*
+- Per esempio, cosa succede se stiamo tentando di leggere un file che non esiste? O se lo eliminiamo mentre il nostro programma è in esecuzione? <!-- .element: class="fragment" -->
+
+--
+
+## Gestire le Eccezioni
+
+- Possiamo (e dovremmo) gestire le eccezioni racchiudendo le nostre istruzioni in un <!-- .element: class="fragment" --> blocco `try/except`
+
+```python
+try:
+	x = int(input('Inserisci un intero: '))
+except ValueError:
+	print('Oops! Non era un intero.')
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## Sollevare Eccezioni
+
+- In alcuni casi può essere utile sollevare delle eccezioni <!-- .element: class="fragment" -->
+- Per esempio quando una funzione non è in grado di gestire alcuni input <!-- .element: class="fragment" -->
+- Dovranno essere gestite (catturate) dal chiamante della funzione, altrimenti l'utente vedrà un messaggio di errore <!-- .element: class="fragment" -->
+
+```python
+def mandaEmail(email, testo):
+	if not '@' in email:
+		raise ValueError("email non valida")
+	# [..]
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## Definire nuove Eccezioni
+
+- Si possono definire nuove eccezioni, creando una sottoclasse <!-- .element: class="fragment" --> di `Exception` (o di una sua sottoclasse)
+- Spesso le eccezioni che ci fornisce Python sono molto generiche, definendo un'eccezione specifica rendiamo il programma più facile da capire e abbiamo maggior controllo nella gestione delle eccezioni <!-- .element: class="fragment" -->
+
+```python
+class InvalidEmail(ValueError):
+	"""Un indirizzo email invalido"""
+```
+<!-- .element: class="fragment" -->
+
+--
+
+## Try ... Finally
+
+--
+
+## The `with` statement
 
 
           </script>

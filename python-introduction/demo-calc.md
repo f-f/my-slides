@@ -3,8 +3,10 @@
 >>> 2 + 3
 >>> 3 * 5
 
-Examples of floating point numbers (or floats for short) are 3.23 and 52.3E-4. 
-The E notation indicates powers of 10. In this case, 52.3E-4 means 52.3 * 10^-4^.
+* Examples of floating point numbers (or floats for short) are 3.23 and 52.3E-4. 
+* The E notation indicates powers of 10. In this case, 52.3E-4 means 52.3 * 10^-4^.
+
+* Interi hanno lunghezza arbitraria.
 
 Quick overview:
 

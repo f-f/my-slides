@@ -73,16 +73,20 @@
 <img src="https://s.gravatar.com/avatar/2643a3783b49696299e801018c6291a5?s=250" alt="Germano Gabbienelli" style=" border: 0; box-shadow: none; border-radius: 130px;">
 
 <h3> Fabrizio Ferrai</h3>
+<h4> [@fabferrai](https://twitter.com/fabferrai) </h4>
 <h4> [ferrai.io](http://ferrai.io) </h4>
-<h4> [Github](http://github.com/ff-) - [Email](mailto:fabrizio.ferrai@mail.polimi.it) </h4>
+<h4> [github.com/ff-](http://github.com/ff-)</h4>
+<h4> [fabrizio.ferrai@mail.polimi.it](mailto:fabrizio.ferrai@mail.polimi.it) </h4>
 </div>
 
 <div style="float:left; width:50%">
 <img src="https://s.gravatar.com/avatar/0b6c164ac2d37d47d1fe8c15f6b0ac79?s=250" alt="Germano Gabbienelli" style=" border: 0; box-shadow: none; border-radius: 130px;">
 
 <h3> Germano Gabbianelli</h3>
-<h4> [germano.io](http://germano.io) </h4>
-<h4> [Github](http://github.com/tyrion) - [Email](mailto:germano.gabbianelli@mail.polimi.it) </h4>
+<h4> &nbsp; </h4>
+<h4> [blog.germano.io](http://blog.germano.io) </h4>
+<h4> [github.com/tyrion](http://github.com/tyrion)</h4>
+<h4> [tyrion@python.it](mailto:tyrion@python.it) </h4>
 </div>
 
 ---
@@ -143,7 +147,7 @@
 
 ## Installazione
 
-* [Windows](http://www.howtogeek.com/197947/how-to-install-python-on-windows/) (attenti che questa guida fa riferimento ad una versione passata, la versione attuale è la 3.4.3)
+* [Windows](http://www.howtogeek.com/197947/how-to-install-python-on-windows/)
 * [Mac OS X](http://www.macobserver.com/tmo/article/how-to-upgrade-your-mac-to-python-3)
 * Linux: dovrebbe esserci già (digitate "python3" nel terminale).
 
@@ -457,7 +461,7 @@ li voglio rendere uguali
 
 ## `while`
 
-Eseguire più volte le stesse istruzioni (finchè una condizione è vera)
+Eseguire più volte le stesse istruzioni (finché una condizione è vera)
 
 ```python
 >>> x = 0
@@ -584,7 +588,7 @@ say('World', 5)
 
 ## Keyword arguments
 
-Anzichè passare gli argomenti in ordine, li chiamiamo per nome
+Anziché passare gli argomenti in ordine, li chiamiamo per nome
 
 ```python
 def func(a, b=5, c=10):
@@ -597,7 +601,8 @@ func(c=50, a=100)
 
 --
 
-## Parametri VarArgs
+<!-- .slide: data-background="#006600" -->
+## Approfondimento: parametri VarArgs
 
 Possiamo scegliere di accettare qualsiasi parametro ci viene passato
 
@@ -613,7 +618,7 @@ Possiamo scegliere di accettare qualsiasi parametro ci viene passato
 
 ## Il `return` statement
 
-Tramite il `return` la funzione ci da un risultato
+Tramite il `return` la funzione ci dà un risultato
 
 ```python
 >>> def test_return(to_print, to_return):
@@ -653,8 +658,8 @@ nananananananananananana
 
 ```python
 def print_max(x, y):
-	'''Prints the maximum of two numbers.
-	The two values must be integers.'''
+	"""Prints the maximum of two numbers.
+	The two values must be integers."""
 
 	# convert to integers, if possible
 	x = int(x)
@@ -679,7 +684,7 @@ print print_max.__doc__
 
 * Permettono di riutilizzare funzioni che abbiamo definito, in altri programmi che scriveremo
 * Un modulo è semplicemente un file con estensione .py
-* Un modolo può essere importato da un altro programma
+* Un modulo può essere importato da un altro programma
 
 ```python
 >>> import mio_modulo
@@ -929,7 +934,7 @@ SyntaxError: invalid syntax
 
 ## Eccezioni
 
-- Rappresentano l'accadimento di <!-- .element: class="fragment" --> situazioni *eccezionali*
+- Rappresentano il verificarsi di <!-- .element: class="fragment" --> situazioni *eccezionali*
 - Per esempio, cosa succede se stiamo tentando di leggere un file che non esiste? O se lo eliminiamo mentre il nostro programma è in esecuzione? <!-- .element: class="fragment" -->
 
 --

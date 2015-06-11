@@ -102,6 +102,10 @@
 
 --
 
+<img src="img/nostupid.jpeg" alt="No stupid" style="width: 80%; border: 0;">
+
+--
+
 ## Programmare
 ### Perché?
 
@@ -383,7 +387,7 @@ Informazioni sulle stringhe: <!-- .element: class="fragment" -->
 * Tupla: `(4, "abc", 4.3)`
 * Dizionario: `{"a": 3, "b": 42}`
 
-<!-- .element: class="fragment" --> Ma ne parleremo nel capitolo [__"Strutture Dati"__](#/11)
+<!-- .element: class="fragment" --> Ma ne parleremo nel capitolo [__"Strutture Dati"__](#/12)
 
 --
 
@@ -406,6 +410,10 @@ TypeError: Can't convert 'int' object to str implicitly
 ```
 
 <!-- .element: class="fragment" -->
+
+--
+
+<img src="img/questions.jpeg" alt="Questions" style="width: 50%; border: 0;">
 
 ---
 
@@ -461,7 +469,7 @@ li voglio rendere uguali
 
 ## `while`
 
-Eseguire più volte le stesse istruzioni (finché una condizione è vera)
+Eseguire più volte le stesse istruzioni (fintantoché una condizione è vera)
 
 ```python
 >>> x = 0
@@ -482,7 +490,7 @@ ora x vale 3
 Cicli di esecuzione sulle sequenze
 
 ```python
-for i in range(1, 5):
+for i in [0, 1, 2, 3, 4]:
 	print i
 ```
 
@@ -494,14 +502,14 @@ for i in range(1, 5):
 * `continue`: salta all'iterazione successiva
 
 ```python
-for i in range(1, 8):
+for i in [0, 1, 2, 3, 4, 5, 6, 7]:
 	if i == 2:
 		continue
 	if i == 6:
 		break
-	print i
+	print(i)
 else:
-	print 'The for loop is over'
+	print("The for loop is over")
 ```
 <!-- .element: class="fragment" -->
 
@@ -625,10 +633,10 @@ Tramite il `return` la funzione ci dà un risultato
 ... 	print(to_print)
 ... 	return to_return*6
 ... 
->>> print(test_return("Batman's song:", "nana"))
+>>> x = test_return("Batman's song:", "nana")
 Batman's song:
+>>> x
 nananananananananananana
->>> 
 ```
 
 --
@@ -666,13 +674,17 @@ def print_max(x, y):
 	y = int(y)
 
 	if x > y:
-		print x, 'is maximum'
+		print(x, 'is maximum')
 	else:
-		print y, 'is maximum'
+		print(y, 'is maximum')
 
 print_max(3, 5)
-print print_max.__doc__
+help(print_max)
 ```
+
+---
+
+<img src="img/thanksquestions.jpeg" alt="Questions" style="width: 65%; border: 0;">
 
 ---
 
@@ -863,6 +875,14 @@ True
 - Un field può appartenere <!-- .element: class="fragment" -->  alla classe (*variabile di classe*) o all'istanza (*variabile d'istanza*).
 - I field e i metodi di una classe <!-- .element: class="fragment" --> nel loro insieme sono detti **attributi** della classe
 
+--
+
+<!-- .slide: data-background="http://i.giphy.com/WE8GoldTC2pXy.gif" -->
+
+--
+
+<img src="img/questionsjim.jpeg" alt="Questions" style="width: 50%; border: 0;">
+
 ---
 
 # Input e Output
@@ -984,18 +1004,17 @@ class InvalidEmail(ValueError):
 ```
 <!-- .element: class="fragment" -->
 
---
-
-## Try ... Finally
-
---
-
-## The `with` statement
-
 ---
 
 <!-- .slide: data-background="#00aa00" -->
 <img src="img/success.jpeg" alt="Success" style="width: 120%; border: 0;">
+
+---
+
+# Links
+
+* [A Byte of Python](http://www.swaroopch.com/notes/python/)
+* [Python Tutorial](https://docs.python.org/3.5/tutorial/)
 
 ---
 

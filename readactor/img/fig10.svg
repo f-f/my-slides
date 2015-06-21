@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 243.2 181.9" enable-background="new 0 0 243.2 181.9" xml:space="preserve">
+<rect x="5.4" y="27.2" fill="#282829" width="89.3" height="83.8"/>
+<rect x="5.4" y="27.2" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="89.3" height="83.8"/>
+<text transform="matrix(1 0 0 1 8.5297 37.1501)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">map_ptr</text>
+<rect x="72.5" y="172.4" fill="#5B5C5C" width="5" height="5.7"/>
+<rect x="72.5" y="172.4" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="5" height="5.7"/>
+<text transform="matrix(1 0 0 1 79.5057 177.1462)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458">Execute-only</text>
+<text transform="matrix(1 0 0 1 9.329 177.1462)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458">Readable-writable</text>
+<path fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M5.4,44.1h89.3 M3.3,172.4h5v5.7h-5V172.4z"/>
+<text transform="matrix(1 0 0 1 25.2831 24.5075)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458">V8 </text>
+<text transform="matrix(1 0 0 1 36.0424 24.5075)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">Code</text>
+<text transform="matrix(1 0 0 1 53.9149 24.5075)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458"> object</text>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.4" y1="72" x2="94.8" y2="72"/>
+<text transform="matrix(1 0 0 1 8.5297 81.902)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">code</text>
+<text transform="matrix(1 0 0 1 8.5297 56.4596)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">code header</text>
+<rect x="3.3" y="161.2" fill="#282829" width="5" height="5.7"/>
+<rect x="3.3" y="161.2" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="5" height="5.7"/>
+<text transform="matrix(1 0 0 1 9.4296 165.9777)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458">Readable-writable-executable</text>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="4.9637,3.1027" x1="116.8" y1="5" x2="116.8" y2="166.9"/>
+<rect x="128.3" y="27.2" fill="#6F6F6F" width="89.3" height="67.1"/>
+<rect x="128.3" y="27.2" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="89.3" height="67.1"/>
+<text transform="matrix(1 0 0 1 131.3851 37.1501)" fill="#FFFFFF" font-family="'Courier-Bold'" font-size="7.4458">return</text>
+<text transform="matrix(1 0 0 1 158.1947 37.1501)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458"> map_ptr</text>
+<rect x="128.3" y="105.4" width="89.3" height="28"/>
+<rect x="128.3" y="105.4" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="89.3" height="28"/>
+<text transform="matrix(1 0 0 1 131.3851 115.3693)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">CodeHeader object</text>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="128.3" y1="44.1" x2="217.6" y2="44.1"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="128.3" y1="60.8" x2="217.6" y2="60.8"/>
+<text transform="matrix(1 0 0 1 131.3851 56.4631)" fill="#FFFFFF" font-family="'Courier-Bold'" font-size="7.4458">return</text>
+<text transform="matrix(1 0 0 1 158.1947 56.4631)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458"> code_hdr_ptr</text>
+<text transform="matrix(1 0 0 1 131.3851 70.736)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">code</text>
+<text transform="matrix(1 0 0 1 10.6395 13.8561)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="9.9277">Legacy JIT Cod</tspan><tspan x="69.9" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="9.9277" letter-spacing="42">e</tspan><tspan x="117.9" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="9.9277">Readacted JIT Code</tspan></text>
+<text transform="matrix(1 0 0 1 148.1385 24.5075)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458">V8 </text>
+<text transform="matrix(1 0 0 1 158.8973 24.5075)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">Code</text>
+<text transform="matrix(1 0 0 1 176.7709 24.5075)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="7.4458"> object</text>
+<rect x="128.3" y="144.5" width="89.3" height="28"/>
+<rect x="128.3" y="144.5" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="89.3" height="28"/>
+<text transform="matrix(1 0 0 1 131.3851 154.4601)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">Map object</text>
+<rect x="5.4" y="122.2" width="89.3" height="28"/>
+<rect x="5.4" y="122.2" fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="89.3" height="28"/>
+<text transform="matrix(1 0 0 1 8.5297 132.1227)" fill="#FFFFFF" font-family="'Courier'" font-size="7.4458">Map object</text>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	219.1,36.2 240,36.2 240,144.5 222.5,144.5 "/>
+<polyline fill="#FFFFFF" points="218.8,144.5 222.5,145.9 222.5,143.1 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-miterlimit="10" points="218.8,144.5 222.5,145.9 222.5,143.1 
+	"/>
+<polyline fill="#FFFFFF" points="216.7,36.2 217.9,37.1 219.1,36.2 217.9,35.3 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-miterlimit="10" points="216.7,36.2 217.9,37.1 219.1,36.2 
+	217.9,35.3 "/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	96.1,35.8 105.9,35.8 105.9,122.2 99.7,122.2 "/>
+<polyline fill="#FFFFFF" points="96,122.2 99.7,123.6 99.7,120.8 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-miterlimit="10" points="96,122.2 99.7,123.6 99.7,120.8 "/>
+<polyline fill="#FFFFFF" points="93.6,35.8 94.9,36.7 96.1,35.8 94.9,34.8 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-miterlimit="10" points="93.6,35.8 94.9,36.7 96.1,35.8 
+	94.9,34.8 "/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	219.1,55.2 228.8,55.2 228.7,105.5 222.5,105.5 "/>
+<polyline fill="#FFFFFF" points="218.8,105.5 222.5,106.9 222.5,104.1 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-miterlimit="10" points="218.8,105.5 222.5,106.9 222.5,104.1 
+	"/>
+<polyline fill="#FFFFFF" points="216.7,55.2 217.9,56.2 219.1,55.2 217.9,54.3 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.6203" stroke-miterlimit="10" points="216.7,55.2 217.9,56.2 219.1,55.2 
+	217.9,54.3 "/>
+</svg>

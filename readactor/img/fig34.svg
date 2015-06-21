@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 243.2 188.7" enable-background="new 0 0 243.2 188.7" xml:space="preserve">
+<rect x="16.5" y="11.4" width="64.5" height="52.6"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M16.5,28.6H81 M16.5,11.4H81V64H16.5V11.4z"/>
+<line fill="none" stroke="#000000" stroke-width="1.4345" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16.5" y1="11.4" x2="81" y2="11.4"/>
+<text transform="matrix(1 0 0 1 18.1633 17.9764)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">Function pointer 1 </text>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16.5" y1="20" x2="81" y2="20"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16.5" y1="37.3" x2="81" y2="37.3"/>
+<line fill="none" stroke="#000000" stroke-width="2.3902" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16.5" y1="63.9" x2="81" y2="63.9"/>
+<text transform="matrix(1 0 0 1 18.1633 35.2474)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">Return address</text>
+<text transform="matrix(1 0 0 1 31.719 59.9715)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">Stack / Heap</text>
+<line fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16.4" y1="45.8" x2="81" y2="45.8"/>
+<text transform="matrix(1 0 0 1 3.8821 8.9012)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">Data pages (</tspan><tspan x="32.4" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">r</tspan><tspan x="34.2" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">eadable-writeable)</tspan></text>
+<rect x="174.3" y="11.8" fill="#383939" width="61.4" height="51.6"/>
+<rect x="174.3" y="11.8" fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="61.4" height="51.6"/>
+<text transform="matrix(1 0 0 1 175.7468 19.4701)" fill="#FFFFFF" font-family="'Courier-Bold'" font-size="5.7365">Function A</text>
+<text transform="matrix(1 0 0 1 210.1716 19.4701)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">:</text>
+<text transform="matrix(1 0 0 1 175.7468 26.1644)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">asm_ins</text>
+<text transform="matrix(1 0 0 1 175.7468 32.8592)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">asm_ins</text>
+<text transform="matrix(1 0 0 1 175.7468 39.5536)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">JUMP Trampoline B</text>
+<text transform="matrix(1 0 0 1 175.7468 46.2479)" fill="#FFFFFF" font-family="'Courier-Bold'" font-size="5.7365">Call_Site_B:</text>
+<text transform="matrix(1 0 0 1 175.7468 52.9427)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">...</text>
+<text transform="matrix(1 0 0 1 172.0349 8.9095)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">Code page (execute-only)</text>
+<rect x="98.1" y="11.4" fill="#292929" width="59.2" height="52.9"/>
+<rect x="98.1" y="11.4" fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="59.2" height="52.9"/>
+<path d="M106.4,27.7h44.9c1.3,0,2.4,1.1,2.4,2.4v10.2c0,1.3-1.1,2.4-2.4,2.4h-44.9c-1.3,0-2.4-1.1-2.4-2.4V30.1
+	C104,28.8,105,27.7,106.4,27.7"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M106.4,27.7h44.9c1.3,0,2.4,1.1,2.4,2.4v10.2c0,1.3-1.1,2.4-2.4,2.4h-44.9c-1.3,0-2.4-1.1-2.4-2.4V30.1
+	C104,28.8,105,27.7,106.4,27.7z"/>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M106.4,27.7h44.9c1.3,0,2.4,1.1,2.4,2.4v10.2c0,1.3-1.1,2.4-2.4,2.4h-44.9c-1.3,0-2.4-1.1-2.4-2.4V30.1
+			C104,28.8,105,27.7,106.4,27.7"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 105.4055 35.3397)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">Trampoline A</text>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 95.6057 8.9012)" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">Code page (execute-only)</text>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="1.9123,1.9123" points="
+	82.5,16.9 89,16.9 89,35 100.5,34.9 "/>
+<polyline fill="#FFFFFF" points="103.3,34.9 100.4,33.9 100.5,36 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="103.3,34.9 100.4,33.9 100.5,36 "/>
+<polyline fill="#FFFFFF" points="80.5,16.9 81.5,17.6 82.5,16.9 81.5,16.2 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="80.5,16.9 81.5,17.6 82.5,16.9 
+	81.5,16.2 "/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	151.2,33.7 162.6,33.7 162.7,17.8 170.5,17.8 "/>
+<polyline fill="#FFFFFF" points="173.4,17.8 170.5,16.7 170.5,18.9 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="173.4,17.8 170.5,16.7 170.5,18.9 "/>
+<polyline fill="#FFFFFF" points="149.3,33.7 150.3,34.4 151.2,33.7 150.3,33 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="149.3,33.7 150.3,34.4 151.2,33.7 
+	150.3,33 "/>
+<path d="M106.4,46.4h44.9c1.3,0,2.4,1.1,2.4,2.4v10.2c0,1.3-1.1,2.4-2.4,2.4h-44.9c-1.3,0-2.4-1.1-2.4-2.4V48.8
+	C104,47.5,105,46.4,106.4,46.4"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M106.4,46.4h44.9c1.3,0,2.4,1.1,2.4,2.4v10.2c0,1.3-1.1,2.4-2.4,2.4h-44.9c-1.3,0-2.4-1.1-2.4-2.4V48.8
+	C104,47.5,105,46.4,106.4,46.4z"/>
+<g>
+	<defs>
+		<path id="SVGID_3_" d="M106.4,46.4h44.9c1.3,0,2.4,1.1,2.4,2.4v10.2c0,1.3-1.1,2.4-2.4,2.4h-44.9c-1.3,0-2.4-1.1-2.4-2.4V48.8
+			C104,47.5,105,46.4,106.4,46.4"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_4_)">
+		<text transform="matrix(1 0 0 1 105.4055 54.0428)" fill="#FFFFFF" font-family="'Courier'" font-size="5.7365">Trampoline B</text>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 113.3791 17.242)" fill="#FFFFFF" font-family="'HelveticaNeue-Bold'" font-size="5.7365">Readactor</text>
+<text transform="matrix(1 0 0 1 110.9416 24.4125)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Bold'" font-size="5.7365">T</tspan><tspan x="3" y="0" fill="#FFFFFF" font-family="'HelveticaNeue-Bold'" font-size="5.7365">rampolines</tspan></text>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="1.9123,1.9123" points="
+	70.2,34.2 85.6,34.1 85.6,52.3 100.6,52.3 "/>
+<polyline fill="#FFFFFF" points="103.5,52.3 100.6,51.2 100.6,53.4 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="103.5,52.3 100.6,51.2 100.6,53.4 "/>
+<polyline fill="#FFFFFF" points="68.3,34.3 69.2,35 70.2,34.2 69.2,33.5 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="68.3,34.3 69.2,35 70.2,34.2 
+	69.2,33.5 "/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	151.2,52.3 162.8,52.3 162.7,44.6 170.3,44.6 "/>
+<polyline fill="#FFFFFF" points="173.2,44.6 170.3,43.5 170.3,45.7 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="173.2,44.6 170.3,43.5 170.3,45.7 "/>
+<polyline fill="#FFFFFF" points="149.2,52.3 150.2,53.1 151.2,52.3 150.2,51.6 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="149.2,52.3 150.2,53.1 151.2,52.3 
+	150.2,51.6 "/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+	122.4,70.9 135.9,70.9 135.9,74.3 148,74.3 "/>
+<polyline fill="#FFFFFF" points="150.9,74.3 148,73.2 148,75.3 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="150.9,74.3 148,73.2 148,75.3 "/>
+<polyline fill="#FFFFFF" points="120.5,70.9 121.4,71.6 122.4,70.9 121.4,70.1 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="120.5,70.9 121.4,71.6 122.4,70.9 
+	121.4,70.1 "/>
+<polyline fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="1.9123,1.9123" points="
+	18.3,71.5 31.8,71.5 31.8,74.9 43.9,74.9 "/>
+<polyline fill="#FFFFFF" points="46.8,74.9 43.9,73.8 43.9,76 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="46.8,74.9 43.9,73.8 43.9,76 "/>
+<polyline fill="#FFFFFF" points="16.4,71.5 17.3,72.2 18.3,71.5 17.3,70.8 "/>
+<polygon fill="none" stroke="#FFFFFF" stroke-width="0.4778" stroke-miterlimit="10" points="16.4,71.5 17.3,72.2 18.3,71.5 
+	17.3,70.8 "/>
+<text transform="matrix(1 0 0 1 51.6379 75.1371)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">Data </tspan><tspan x="13.6" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">r</tspan><tspan x="15.4" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">efe</tspan><tspan x="23.3" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">r</tspan><tspan x="25.1" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">ence to code</tspan></text>
+<text transform="matrix(1 0 0 1 155.7781 75.1371)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">Code </tspan><tspan x="15.5" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">r</tspan><tspan x="17.3" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">efe</tspan><tspan x="25.2" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">r</tspan><tspan x="27" y="0" fill="#FFFFFF" font-family="'HelveticaNeue'" font-size="5.7365">ence to code</tspan></text>
+<rect x="3.3" y="108.5" fill="#262626" width="38" height="22"/>
+<rect x="3.3" y="108.5" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="22"/>
+<text transform="matrix(1 0 0 1 10.7839 117.3251)" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">Virtual </text>
+<text transform="matrix(1 0 0 1 7.739 127.1596)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">Memo</tspan><tspan x="22.1" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">r</tspan><tspan x="24.8" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">y</tspan></text>
+<rect x="3.3" y="130.6" width="38" height="17"/>
+<rect x="3.3" y="130.6" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 12.8981 137.0859)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">C</tspan><tspan x="4.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">O</tspan><tspan x="10.4" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">D</tspan><tspan x="15.9" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">E</tspan></text>
+<text transform="matrix(1 0 0 1 11.3708 145.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">a</tspan><tspan x="8.1" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">e 1</tspan></text>
+<rect x="3.3" y="147.6" width="38" height="17"/>
+<rect x="3.3" y="147.6" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 13.7341 154.0654)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">D</tspan><tspan x="5.4" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">A</tspan><tspan x="9.8" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">T</tspan><tspan x="13.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">A</tspan></text>
+<text transform="matrix(1 0 0 1 11.3776 162.2744)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">a</tspan><tspan x="8.1" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">e 2</tspan></text>
+<rect x="53.2" y="108.5" fill="#262626" width="38" height="22"/>
+<rect x="53.2" y="108.5" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="22"/>
+<text transform="matrix(1 0 0 1 64.156 117.3251)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">a</tspan><tspan x="8.2" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">e</tspan></text>
+<text transform="matrix(1 0 0 1 63.2204 127.1596)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">T</tspan><tspan x="3.5" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="8.2091">able</tspan></text>
+<rect x="53.2" y="130.6" width="38" height="17"/>
+<rect x="53.2" y="130.6" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 63.3698 137.0859)" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">read-</text>
+<text transform="matrix(1 0 0 1 59.5856 145.2949)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">e</tspan><tspan x="4" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">x</tspan><tspan x="7.6" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">ecu</tspan><tspan x="19.9" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">t</tspan><tspan x="22.6" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">e</tspan></text>
+<rect x="53.2" y="147.6" width="38" height="17"/>
+<rect x="53.2" y="147.6" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 54.8171 158.1537)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">read-wri</tspan><tspan x="28.6" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">t</tspan><tspan x="31.2" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">e</tspan></text>
+<rect x="102.7" y="89.1" fill="#262626" width="38" height="28.1"/>
+<rect x="102.7" y="89.1" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="28.1"/>
+<text transform="matrix(1 0 0 1 112.7839 96.8266)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">Gue</tspan><tspan x="12.5" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">s</tspan><tspan x="15.4" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">t</tspan><tspan x="17.8" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735"> </tspan></text>
+<text transform="matrix(1 0 0 1 109.4421 105.6748)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">P</tspan><tspan x="3.9" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">h</tspan><tspan x="7.9" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">y</tspan><tspan x="11.3" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">sical</tspan></text>
+<text transform="matrix(1 0 0 1 108.5564 114.5312)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">Memo</tspan><tspan x="19.8" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">r</tspan><tspan x="22.3" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">y</tspan></text>
+<rect x="102.7" y="117.4" width="38" height="17"/>
+<rect x="102.7" y="117.4" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 110.7194 127.9711)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">a</tspan><tspan x="8.1" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">e 1</tspan></text>
+<rect x="102.7" y="134.4" width="38" height="17"/>
+<rect x="102.7" y="134.4" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 117.1599 142.0019)" fill="#FFFFFF" font-family="'Calibri'" font-size="13.1347">…</text>
+<rect x="102.7" y="151.3" width="38" height="17.1"/>
+<rect x="102.7" y="151.3" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17.1"/>
+<text transform="matrix(1 0 0 1 110.7194 161.9189)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">a</tspan><tspan x="8.1" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">e 2</tspan></text>
+<rect x="102.7" y="168.3" width="38" height="17"/>
+<rect x="102.7" y="168.3" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 117.1599 175.8989)" fill="#FFFFFF" font-family="'Calibri'" font-size="13.1347">…</text>
+<rect x="152.5" y="89.1" fill="#262626" width="38" height="28.1"/>
+<rect x="152.5" y="89.1" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="28.1"/>
+<text transform="matrix(1 0 0 1 166.0095 105.6748)" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">EPT</text>
+<rect x="152.5" y="117.4" width="38" height="17"/>
+<rect x="152.5" y="117.4" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 157.6521 123.871)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">e</tspan><tspan x="4" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">x</tspan><tspan x="7.6" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">ecu</tspan><tspan x="19.9" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">t</tspan><tspan x="22.6" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">e-</tspan></text>
+<text transform="matrix(1 0 0 1 164.5808 132.08)" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">only</text>
+<rect x="152.5" y="134.4" width="38" height="17"/>
+<rect x="152.5" y="134.4" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 167.0407 142.0019)" fill="#FFFFFF" font-family="'Calibri'" font-size="13.1347">…</text>
+<rect x="152.5" y="151.3" width="38" height="17.1"/>
+<rect x="152.5" y="151.3" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="17.1"/>
+<text transform="matrix(1 0 0 1 154.1618 161.9189)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">read-wri</tspan><tspan x="28.6" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">t</tspan><tspan x="31.2" y="0" fill="#FFFFFF" font-family="'Calibri,Italic'" font-size="8.2091">e</tspan></text>
+<rect x="152.5" y="168.3" width="38" height="17"/>
+<rect x="152.5" y="168.3" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" stroke-dasharray="3.1464,1.1799" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 167.0407 175.8989)" fill="#FFFFFF" font-family="'Calibri'" font-size="13.1347">…</text>
+<rect x="202.4" y="89.1" fill="#262626" width="38" height="28.1"/>
+<rect x="202.4" y="89.1" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="28.1"/>
+<text transform="matrix(1 0 0 1 214.4206 96.8266)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">Ho</tspan><tspan x="8.9" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">s</tspan><tspan x="11.7" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">t </tspan></text>
+<text transform="matrix(1 0 0 1 209.2097 105.6748)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">P</tspan><tspan x="3.9" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">h</tspan><tspan x="7.9" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">y</tspan><tspan x="11.3" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3833">sical</tspan></text>
+<text transform="matrix(1 0 0 1 208.3239 114.5312)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">Memo</tspan><tspan x="19.8" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">r</tspan><tspan x="22.3" y="0" fill="#FFFFFF" font-family="'Calibri,Bold'" font-size="7.3735">y</tspan></text>
+<rect x="202.4" y="117.4" width="38" height="17"/>
+<rect x="202.4" y="117.4" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 210.488 127.9711)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">a</tspan><tspan x="8.1" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">e 1</tspan></text>
+<rect x="202.4" y="134.4" width="38" height="17"/>
+<rect x="202.4" y="134.4" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 216.9274 142.0019)" fill="#FFFFFF" font-family="'Calibri'" font-size="13.1347">…</text>
+<rect x="202.4" y="151.3" width="38" height="17.1"/>
+<rect x="202.4" y="151.3" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17.1"/>
+<text transform="matrix(1 0 0 1 210.488 161.9189)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">P</tspan><tspan x="4.2" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">a</tspan><tspan x="8.1" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">g</tspan><tspan x="12.7" y="0" fill="#FFFFFF" font-family="'Calibri'" font-size="8.2091">e 2</tspan></text>
+<rect x="202.4" y="168.3" width="38" height="17"/>
+<rect x="202.4" y="168.3" fill="none" stroke="#FFFFFF" stroke-width="0.3933" stroke-miterlimit="10" width="38" height="17"/>
+<text transform="matrix(1 0 0 1 216.9274 175.8989)" fill="#FFFFFF" font-family="'Calibri'" font-size="13.1347">…</text>
+<path fill="#FFFFFF" d="M50.7,137.9l2.5,1.2l-2.5,1.2 M41.4,138.9h9.8v0.4h-9.8V138.9z"/>
+<path fill="#FFFFFF" d="M100.2,127.1l2.5-1.2l-2.5-1.2 M91.3,139.3h5.9v-13.4l-0.2,0.2h3.7v-0.4h-3.9v13.4l0.2-0.2h-5.7V139.3z"/>
+<path fill="#FFFFFF" d="M150.1,124.7l2.5,1.2l-2.5,1.2 M140.7,125.7h9.8v0.4h-9.8V125.7z"/>
+<path fill="#FFFFFF" d="M199.9,124.7l2.5,1.2l-2.5,1.2 M190.6,125.7h9.8v0.4h-9.8V125.7z"/>
+<path fill="#FFFFFF" d="M50.7,154.9l2.5,1.2l-2.5,1.2 M41.4,155.9h9.8v0.4h-9.8V155.9z"/>
+<path fill="#FFFFFF" d="M150.1,158.6l2.5,1.2l-2.5,1.2 M140.7,159.6h9.8v0.4h-9.8V159.6z"/>
+<path fill="#FFFFFF" d="M199.9,158.6l2.5,1.2l-2.5,1.2 M190.6,159.6h9.8v0.4h-9.8V159.6z"/>
+<path fill="#FFFFFF" d="M100.2,158.6l2.5,1.2l-2.5,1.2 M91.3,155.9h5.9v4l-0.2-0.2h3.7v0.4h-3.9v-4l0.2,0.2h-5.7V155.9z"/>
+</svg>

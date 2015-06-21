@@ -32,6 +32,7 @@
 
     <!-- For syntax highlighting -->
 	<link rel="stylesheet" href="../reveal.js/highlight.js/src/styles/solarized_light.css" id="highlight-theme">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
   <style type="text/css">
@@ -41,6 +42,10 @@
     font-size: 1.5em;
     line-height: 1.4em;
     border-radius: .2em;
+  }
+
+  .fa {
+  	margin-left: .3em;
   }
   </style>
 
@@ -68,27 +73,168 @@
 
 ---
 
-# Wait, what's ROP?
+<!-- .slide: data-background="http://i.giphy.com/90F8aUepslB84.gif" -->
+
+---
+
+# Wait, <br>what's ROP?
 
 --
 
-## Return Oriented Programming
+## ELI5 ROP
+
+- Code Reuse Attacks: exec benign code to perform illegal actions <!-- .element: class="fragment" -->
+- In practice: exploit a memory corruption error to hijack the IP <!-- .element: class="fragment" -->
+- The most famous <!-- .element: class="fragment" --> is **Return Oriented Programming**
+- Idea: chain together existing short instruction <!-- .element: class="fragment" --> sequences (*gadgets*) one after another to perform the malicious behaviour
+
+--
+
+<!-- .slide: data-background="img/howtobasic.jpeg" -->
+## How To Basic
+
+- To chain those gadgets one needs to know <!-- .element: class="fragment" --> they **exist**
+- <!-- .element: class="fragment" --> And **where** they are
+- Then inject the right pointers in <!-- .element: class="fragment" --> the **right places**
+
+--
+
+## The Threat of<br>Memory Disclosure
+
+<img src="img/fig1.svg" alt="fig1" style="width: 75%; border: 0; background: transparent; margin-top: -0.3em;">
+
+--
+
+## Preventing <br> Direct Memory Disclosure
+* Rewriting inter-page references <!-- .element: class="fragment" -->
+* Redirect attempts to read code pages <!-- .element: class="fragment" -->
+
+<br>
+### How about indirect? <!-- .element: class="fragment" -->
+It depends on the granularity of the code randomization <!-- .element: class="fragment" -->
+
+--
+
+## ROP types
+* Static ROP <!-- .element: class="fragment" -->
+* JIT-ROP with direct disclosure <!-- .element: class="fragment" -->
+* JIT-ROP with indirect disclosure <!-- .element: class="fragment" -->
+* ROP on JIT generated code <!-- .element: class="fragment" -->
+* Return-into-libc <!-- .element: class="fragment" -->
 
 ---
 
 # The main idea
 
+--
+
+## Fighting<br>Code Reuse Attacks
+
+* Control Flow Integrity
+* Code Randomization
+
+--
+
+## Why Randomization
+
+* Fine grained CFI has performance issues <!-- .element: class="fragment" -->
+* Precision of CFI is as good as the underlying CFG <!-- .element: class="fragment" -->
+* Randomization is known to be efficient <!-- .element: class="fragment" -->
+
 ---
 
 # Readactor design
+
+<img src="img/fig2.svg" alt="fig1" style="width: 75%; border: 0; background: transparent; margin-top: -0.3em;">
+
+--
+
+## Trampolines
+### Separate Code and Data
+
+<img src="img/fig34.svg" alt="fig1" style="width: 70%; border: 0; background: transparent; margin-top: -0.3em;">
+
+--
+
+## Code Randomization Techniques
+#### (at compile time)
+* Function permutation
+* Register Allocation Randomization
+* Callee-saved register save slot reordering
+
+--
+
+## Recipe
+
+* Kernel patch, ~100 LOC
+* Hypervisor, ~500 LOC
+* LLVM patch, ?
+* V8 JIT patch, ~1k LOC  
+
+--
+
+## The Kernel Patch
+
+#### Extended Page Tables (EPT)
+* Into the Linux Kernel
+* Allows programs to mark pages as exec-noread
+
+--
+
+## Hypervisor
+
+<img src="img/fig5.svg" alt="fig1" style="width: 75%; border: 0; background: transparent; margin-top: -0.3em;">
+
+--
+
+## LLVM patch
+
+<img src="img/fig7.svg" alt="fig1" style="width: 100%; border: 0; background: transparent; margin-top: -0.3em;">
+
+--
+
+## How Readacted JIT Works
+
+<img src="img/fig9.svg" alt="fig1" style="width: 100%; border: 0; background: transparent; margin-top: -0.3em;">
+
+--
+
+## The JIT Patch
+
+<img src="img/fig10.svg" alt="fig1" style="width: 75%; border: 0; background: transparent; margin-top: -0.3em;">
 
 ---
 
 # Achievements
 
+--
+
+## ROP types (revisited)
+* Static <!-- .element: class="fragment" --> ROP: <i class="fa fa-check"></i>
+* JIT-ROP with direct <!-- .element: class="fragment" --> disclosure: <i class="fa fa-check"></i>
+* JIT-ROP with indirect <!-- .element: class="fragment" --> disclosure: whole-functions reuse, random data flow, almost <i class="fa fa-check"></i>
+* ROP on JIT generated <!-- .element: class="fragment" -->code: direct <i class="fa fa-check"></i>, indirect <i class="fa fa-code-fork"></i>
+* <!-- .element: class="fragment" --> Return-into-libc: <i class="fa fa-times"></i>
+
+--
+
+## Performances are awesome
+
+<img src="img/fig1112.svg" alt="fig1" style="width: 100%; border: 0; background: transparent; margin-top: -0.3em;">
+
+---
+
+# Recap
+
+<img src="img/fig13.svg" alt="fig1" style="width: 100%; border: 0; background: transparent; margin-top: -0.3em;">
+
 ---
 
 # Comments
+* Awesome paper
+* No side channel
+* Runs only on Iron
+* Those randomization techniques are sufficient?
 
 ---
 

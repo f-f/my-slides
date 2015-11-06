@@ -19,3 +19,7 @@ cd reveal.js
 git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 git clone https://github.com/isagalaev/highlight.js.git
 ```
+
+### Using the Dockerfile
+
+`docker build ./`, then mount this folder in the folder `/srv` of the container, expose 80.

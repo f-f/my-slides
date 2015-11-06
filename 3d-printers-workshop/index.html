@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>3D Printing Workshop 2015 - Politecnico Open unix Labs</title>
+
+    <meta name="description" content="An introduction to 3D Printers by POuL">
+    <meta name="author" content="Fabrizio Ferrai">
+    <meta name="author" content="Federico Amedeo Izzo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../reveal.js/highlight.js/src/styles/solarized_light.css" id="highlight-theme">
+  </head>
+
+  <style type="text/css">
+  .reveal pre code {
+    color: #3f3f3f;
+    background: #eee none repeat scroll 0% 0%;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    border-radius: .2em;
+  }
+  </style>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
+			<section data-markdown data-separator="^\n---\n$"
+			         data-separator-vertical="^\n--\n$">
+				<script type="text/template">
+
+
+<!-- .slide: data-background="#fdfddf" -->
+
+<img src="img/stampa3d.svg" alt="Banner" style="width: 70%; margin-top: -1em; border: 0; box-shadow: none;">
+
+---
+
+<!-- .slide: data-background="#333333" -->
+
+<div style="float:left; width:50%">
+<img src="https://s.gravatar.com/avatar/2643a3783b49696299e801018c6291a5?s=250" alt="Germano Gabbienelli" style=" border: 0; box-shadow: none; border-radius: 130px;">
+
+<h3> Fabrizio Ferrai</h3>
+<h4> [@fabferrai](https://twitter.com/fabferrai) </h4>
+<h4> [ferrai.io](http://ferrai.io) </h4>
+<h4> [github.com/ff-](http://github.com/ff-)</h4>
+<h4> [fabrizio@ferrai.io](mailto:fabrizio@ferrai.io) </h4>
+</div>
+
+<div style="float:left; width:50%">
+<img src="https://s.gravatar.com/avatar/d6df3fe68a79e24a17f3bba95016e6ca?s=250" alt="Federico Izzo" style=" border: 0; box-shadow: none; border-radius: 130px;">
+
+<h3> Federico Izzo</h3>
+
+</div>
+
+---
+
+# Index
+
+- Perché la stampa 3d
+- Cos'è una stampante 3D?
+- Open Source Hardware: le stampanti desktop
+- Materiali
+- Come si costruisce?
+- Dal modello 3D all'oggetto
+- Slicing
+- Software Open Source per la stampa
+- Dove trovare i modelli online
+- Modellazione: alcuni programmi
+
+```
+TODO: sistemare l'indice, i titoli vanno piú carini
+```
+
+
+---
+
+# Intro: why?
+
+--
+
+<img src="img/nostupid.jpeg" alt="No stupid" style="width: 80%; border: 0;">
+
+--
+
+## Titolo di secondo livello di test
+
+---
+
+# What
+
+---
+
+# Open Source Printing
+## Hardware
+
+---
+
+<img src="img/questionsjim.jpeg" alt="Questions" style="width: 50%; border: 0;">
+
+---
+
+# Materials
+
+---
+
+<!-- .slide: data-background="img/howtobasic.jpeg" -->
+# How to Basic
+
+--
+
+## Aka come si costruisce
+
+---
+
+<img src="img/questions.jpeg" alt="Questions" style="width: 50%; border: 0;">
+
+---
+
+# Model 2 Object
+
+--
+
+## Slicing
+
+---
+
+# Open Source Printing
+## Software
+
+---
+
+<img src="img/thanksquestions.jpeg" alt="Questions" style="width: 65%; border: 0;">
+
+---
+
+# Models
+## Finding them on the Internet
+
+---
+
+# Models
+## Howto
+
+---
+
+<!-- .slide: data-background="#00aa00" -->
+<img src="img/success.jpeg" alt="Success" style="width: 120%; border: 0;">
+
+---
+
+# Links
+
+* TODO
+
+---
+
+# Thank you!
+
+<img src="img/ccbysa.png" alt="License" style="width: 40%; border: 0;">
+
+Queste slides sono licenziate Creative Commons<br>
+Attribution-ShareAlike 3.0 Unported
+
+## [POUL.ORG](https://www.poul.org)
+
+
+          </script>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: '../reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+
+  </script>
+
+  </body>
+</html>

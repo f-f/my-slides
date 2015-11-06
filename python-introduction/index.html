@@ -32,7 +32,7 @@
     <![endif]-->
 
     <!-- For syntax highlighting -->
-	<link rel="stylesheet" href="../reveal.js/highlight.js/src/styles/solarized_light.css" id="highlight-theme">
+	<link rel="stylesheet" href="../reveal.js/highlight.js/src/styles/solarized-light.css" id="highlight-theme">
   </head>
 
   <style type="text/css">
@@ -216,7 +216,7 @@ print('Hello World!')
 
 Le versioni di Python per Windows e OSX contengono IDLE
 
-<!-- .element: class="fragment" --> Altrimenti: [Notepad++](https://notepad-plus-plus.org/), [Gedit](https://wiki.gnome.org/Apps/Gedit), [Atom](https://atom.io/) 
+<!-- .element: class="fragment" --> Altrimenti: [Notepad++](https://notepad-plus-plus.org/), [Gedit](https://wiki.gnome.org/Apps/Gedit), [Atom](https://atom.io/)
 
 ---
 
@@ -258,7 +258,7 @@ Segnalati dall'interprete: <!-- .element: class="fragment" -->
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ZeroDivisionError: division by zero
-``` 
+```
 <!-- .element: class="fragment" -->
 
 --
@@ -271,7 +271,7 @@ ZeroDivisionError: division by zero
 
 ## Variabili
 
-Associamo dei nomi a dei valori 
+Associamo dei nomi a dei valori
 
 e teniamoli da parte per riferirci a loro in modo semplice <!-- .element: class="fragment" -->
 
@@ -544,7 +544,7 @@ Supporta più argomenti <!-- .element: class="fragment" -->
 >>> print(10, 1 + 2)
 10 3
 ```
-<!-- .element: class="fragment" --> 
+<!-- .element: class="fragment" -->
 
 --
 
@@ -607,7 +607,7 @@ Possiamo scegliere di accettare qualsiasi parametro ci viene passato
 ```python
 >>> def test(*args, **kwargs):
 ... 	print(args, kwargs)
-... 
+...
 >>> test(1,2,3, a=3)
 (1, 2, 3) {'a': 3}
 ```
@@ -622,7 +622,7 @@ Tramite il `return` la funzione ci dà un risultato
 >>> def test_return(to_print, to_return):
 ... 	print(to_print)
 ... 	return to_return*6
-... 
+...
 >>> x = test_return("Batman's song:", "nana")
 Batman's song:
 >>> x
@@ -638,7 +638,7 @@ nananananananananananana
 ## Documentazione
 
 <blockquote>
-	**Fact**: passati tre mesi da quando avete scritto un pezzo di codice, 
+	**Fact**: passati tre mesi da quando avete scritto un pezzo di codice,
 	non saprete più cosa fa.
 </blockquote>
 
@@ -740,7 +740,7 @@ else:
 >>> spesa[0] = 'pere'
 ['pere', 'pasta', 'fragole']
 ```
-<!-- .element: class="fragment" --> 
+<!-- .element: class="fragment" -->
 
 - Le liste contengono una sequenza ordinata di oggetti <!-- .element: class="fragment" -->
 - <!-- .element: class="fragment" -->  Sono *mutabili*: possono essere alterate aggiungendo, modificando o rimuovendo elementi
@@ -762,7 +762,7 @@ else:
 
 - Permettono di associare <!-- .element: class="fragment" --> dei *valori* a delle *chiavi*
 - E di recuperare un determinato valore in maniera efficiente conoscendo la relativa chiave. <!-- .element: class="fragment" -->
-<!-- .element: class="fragment" --> - Sono simili ad una rubrica con cui possiamo recuperare l'email (*valore*) di una persona sapendo solo il suo nome (*chiave*): 
+<!-- .element: class="fragment" --> - Sono simili ad una rubrica con cui possiamo recuperare l'email (*valore*) di una persona sapendo solo il suo nome (*chiave*):
 
 ```python
 rubrica = {
@@ -777,7 +777,7 @@ rubrica = {
 
 ## Sequenze
 
-- Liste, tuple e stringhe <!-- .element: class="fragment" --> sono *sequenze* 
+- Liste, tuple e stringhe <!-- .element: class="fragment" --> sono *sequenze*
 - È possibile eseguire determinate operazioni su tutti i tipi di sequenze <!-- .element: class="fragment" -->
 <!-- .element: class="fragment" --> - Le più importanti sono i test di appartenenza (`in` e `not in`) e le operazioni con gli indici
 
@@ -904,14 +904,14 @@ print("Il tuo nome è", nome)
 ## Formattazione dell'Output
 
 Per formattare l'output nella maniera desiderata <!-- .element: class="fragment" --> spesso la funzione `print()` non è sufficiente.
-        
+
 Possiamo usare i metodi della <!-- .element: class="fragment" --> classe `str` e in particolare `str.format()`
 
 ```python
 print('This {food} is {adjective}.'.format(
 	food='spam', adjective='horrible')
 ```
-<!-- .element: class="fragment" --> 
+<!-- .element: class="fragment" -->
 
 --
 
@@ -919,7 +919,7 @@ print('This {food} is {adjective}.'.format(
 
 - La <!-- .element: class="fragment" -->  funzione `open(filename, mode)` ci permette di aprire un file e restituisce un *oggetto file*.
 - Il <!-- .element: class="fragment" --> parametro `mode` ci permette di specificare in che modalità aprire il file (sola lettura, scrittura, etc.).
-- Possiamo interagire con il file tramite i metodi dell'oggetto file (read, readline, write, writeline, close) <!-- .element: class="fragment" --> 
+- Possiamo interagire con il file tramite i metodi dell'oggetto file (read, readline, write, writeline, close) <!-- .element: class="fragment" -->
 - Ricordiamoci di chiudere <!-- .element: class="fragment" --> sempre il file una volta finito di usarlo, con il metodo `close`.
 
 ---

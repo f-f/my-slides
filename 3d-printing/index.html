@@ -258,20 +258,31 @@ Architettura, Design, Meccanica
 - Il progetto RepRap nasce dall'intenzione di sviluppare una 3D Printer che potesse produrre *autonomamente* gran parte dei propri pezzi, fosse *open-hardware* e a *basso costo*
 - Fondato nel 2005 dal Dr Adrian Bowyer, professore di Ingegneria Meccanica, University of Bath (UK)
 
+--
 
+## [RepRap](http://reprap.org)
 
-- reprap.org
-- elettronica basatasu Arduino
-- stampa di materiale plastico
-- il futuro? -> fabtotum, materiali vari
+- Elettronica basata su Arduino
+- Stampa a basso costo di materiale plastico (ABS, PLA, Nylon)
+
+<img src="img/prusa.jpg" alt="Prusa i3" style="width: 50%; border: 0;">
+
+--
+
+## TODO: situazione attuale, wars tra stampanti proprietarie
+
+--
+
+## Il futuro:
+
+- [Fabtotum](http://www.fabtotum.com/)
+- Altri materiali?
+
+<img src="img/fabtotum.jpg" alt="Fabtotum" style="width: 70%; border: 0;">
 
 ---
 
 <img src="img/questionsjim.jpeg" alt="Questions" style="width: 50%; border: 0;">
-
----
-
-# Materials
 
 ---
 
@@ -281,7 +292,84 @@ Architettura, Design, Meccanica
 
 --
 
-## Aka come si costruisce
+## Come si costruisce
+
+TODO
+
+Recipe:
+- Arduino Mega
+- Heated bed?
+- Stepper motors
+- Extruder
+- Hardware
+- Kapton Tape
+- TODO
+
+---
+
+# Materials
+
+--
+
+<!-- .slide: data-background="img/mais.jpg" -->
+
+## PLA
+
+- Cosa é: un polimero biodegradabile, prodotto dall'acido lattico, fermentato dal mais.
+- Caratteristiche: piú duro dell'ABS, scioglie tra i 180°C e i 220°C, ma é piú viscoso quindi é piú probabile che inceppi l'estrusore.
+
+--
+
+## PLA: Stampa
+
+- Materiale ideale per le RepRap: é dimensionalmente stabile, non c'é bisogno di un heated bed, e costa poco.
+- In generale "facile" da stampare: temperature basse, poca pressione necessaria
+- Come stamparlo: aderisce abbastanza bene al piatto: possibile stamparlo direttamente su vetro, o ancora meglio su Kapton Tape (se necessario aggiungere colla stick)
+
+--
+
+## ABS
+
+- Cosa é: Acrylonitrile Butadiene Styrene (ABS), una termoplastica comune, perché leggera e facile da utilizzare.
+- Caratteristiche: migliori proprietá meccaniche di altre termoplastiche, meno fragile del PLA e regge temperature piú alte.
+
+--
+
+<!-- .slide: data-background="img/warp.jpg" -->
+
+## ABS: Stampa
+
+- L'ABS é ottimo perché é facile da trovare in commercio, richiede meno forza di estrusione del PLA, e rende meglio sugli oggetti piccoli
+- Downsides: stampato a temperature piú alte (tra i 200 e i 250°C, di media 230°C), fumi potenzialmente tossicie per persone e animali: *non respiratene i fumi e areate l'ambiente*
+- Problemi in stampa: si imbarca catastroficamente sulle parti larghe
+- Come stamparlo: preparate dell'*ABS juice* (ABS+acetone puro) e spalmatelo sul piatto prima di stampare, lasciar freddare prima di staccare il pezzo.
+
+--
+
+## Nylon
+
+- Cosa é: un poliammide, cioé un polimero contenente monomeri di amidi unite da legami peptidici.
+- In pratica, nylon.
+- Estremamente forte. Come per l'ABS, stampare in *luogo ventilato*
+
+--
+
+## Nylon: Stampa
+
+TODO: aggiungere fragments in giro
+
+Vantaggi del nylon:
+1. Economico e molto diffuso
+2. Le stampe sono flessibili e durevoli, perché é un materiale piú forte di ABS e PLS.
+
+Svantaggi del nylon:
+1. Piú filamentoso di ABS e PLA
+2. Imbarca __molto piú di ABS e PLA__
+3. Molta piú pulizia necessaria, e bisogna seccarlo prima della stampa
+
+--
+
+Policarbonato (PC), TPU, PET, PVA: TODO
 
 ---
 

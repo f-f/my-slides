@@ -311,66 +311,90 @@ Architettura, Design, Meccanica
 
 --
 
-## The workflow is:
-- 3D Generic Model <!-- .element: class="fragment" -->
-- Mesh repair <!-- .element: class="fragment" -->
-- STL <!-- .element: class="fragment" -->
-- GCode <!-- .element: class="fragment" -->
-- Comandi ai motori <!-- .element: class="fragment" -->
+## The workflow:
+- Modello 3D generico
+     Mesh repair: controllare le superfici <!-- .element: class="fragment" -->
+- STL: Formato 3D semplice e adatto alla stampa
+     Slicing: divisione in piani <!-- .element: class="fragment" -->
+- GCode: File contenente la sequenza di comandi per la stampa
+     Software Host: invia i comandi alla stampante <!-- .element: class="fragment" -->
 
 --
 
 ## Mesh repair
+#### es: NetFabb
+<br></br>
+Verifica che l'oggetto sia una figura chiusa
 
 --
 
-## Slicing - dalla stampa
-
-- Seziona il modello in piani e lo prepara per la stampa
-
+## Slicing
 <img src="img/slicing.png" alt="Slicing" style="width: 100%; border: 0;">
+- Seziona il modello in livelli
+- Decide come realizzare ogni livello
+<br></br>
+### Alcuni parametri modificabili sono:
 
 --
 
-### Infill
-- Il software definisce la trama interna
-<!-- .slide: data-background="#2A2A2A" -->
-<img src="img/cat_infill.jpg" alt="Infill" style="width: 100%; border: 0;">
+### Riempimento (infill):
+#### I modelli solidi vengono resi cavi, in questo modo:
+
+- Si usa __meno materiale__ di stampa
+
+- La stampa è __più veloce__
+
+- L'oggetto prodotto è __più leggero__
+
+- è possibile scegliere __trama__ e __percentuale__ di riempimento
+
+<!-- .slide: data-background="img/infill.jpg" -->
 
 --
 
-## Software per Slicing
+### Strutture di supporto
+
+--
+
+### Altri parametri:
+
+- __Spessore dei livelli__: più sottile = più dettagliato, più tempo
+
+- __Temperatura estrusore__: 180°C per PLA e 220 °C per ABS
+
+- __Velocità di stampa__: Generalmente più lento è meglio
+
+--
+
+### Software per Slicing
+
 - Ultimaker Cura
+
 - Slic3r
+
 - Kissengine
 
 ---
 
-## Host Software
-- Pronterface
-- Repetier Host
-- Octoprint
-
----
-
-## Cercare i progetti
-
----
-
-## Editare i progetti
-
----
 <img src="img/thanksquestions.jpeg" alt="Questions" style="width: 65%; border: 0;">
 
 ---
 
-# Models
-## Finding them on the Internet
+## Host Software
+
+- Pronterface
+
+- Repetier Host
+
+- Octoprint
 
 ---
 
-# Models
-## Howto
+## Trovare i modelli su internet
+
+---
+
+## 3D Editors
 
 ---
 

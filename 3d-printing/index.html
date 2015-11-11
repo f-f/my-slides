@@ -474,69 +474,76 @@ TODO: aggiungere fragments in giro
 --
 
 ## The workflow:
-- Modello 3D generico
-     Mesh repair: controllare le superfici <!-- .element: class="fragment" -->
-- STL: Formato 3D semplice e adatto alla stampa
-     Slicing: divisione in piani <!-- .element: class="fragment" -->
-- GCode: File contenente la sequenza di comandi per la stampa
-     Software Host: invia i comandi alla stampante <!-- .element: class="fragment" -->
+- Generic 3D Model
+     Mesh repair: Check for errors on the surface <!-- .element: class="fragment" -->
+- STL: Simple 3D format, suitable for 3D printing
+     Slicing: split the model to slices and decide how to print each slice <!-- .element: class="fragment" -->
+- GCode: File containing the sequence of commands for the printer
+     Host Software: Sends the commands to the printer <!-- .element: class="fragment" -->
 
 --
 
 ## Mesh repair
-#### es: NetFabb
+### es: NetFabb
 <br></br>
-- Verifica che la superficie dell'oggetto non abbia errori
+- Checks the __surface__ for __errors__ in the mesh,
+
+- If the model would have been (hipothetically) put under water,
+no water would have spilled inside it.
 <!-- .slide: data-background="img/meshfix.jpg" -->
 
 --
 
 ## Slicing
 <img src="img/slicing.png" alt="Slicing" style="width: 100%; border: 0;">
-- Seziona il modello in livelli
-- Decide come realizzare ogni livello
+- Slices the model to levels
+- Decides how to realize every level
 <br><br>
-### Alcuni parametri modificabili sono:
+#### You can set parameters like:
 
 --
 
-### Riempimento (infill):
-#### I modelli solidi vengono resi cavi, in questo modo:
+## Infill:
+#### Solid models are made hollow, such that:
 
-- Si usa __meno materiale__ di stampa
-- La stampa è __più veloce__
-- L'oggetto prodotto è __più leggero__
-- è possibile scegliere __trama__ e __percentuale__ di riempimento
+- __less material__ is used for the print
+- The print is __faster__
+- The final object __weights less__
+- It is possible to choose __shape__ and __percentage__ of the infill
 
 <!-- .slide: data-background="img/infill.jpg" -->
 
 --
 
-### Strutture di supporto
+## Support Structures
 
-- Rendono possibile stampare parti "sospese"
+- Are thin, break-away structures
 
-- Necessarie per superfici inclinate > 45°
+- They make printing __unsupported areas__ possible.
+
+- Generally necssary when printing surfaces at angles > 45°
 
 <!-- .slide: data-background="img/SupportGraphic.jpg" -->
 
 --
 
-### Altri parametri:
-Da modificare in caso di problemi
+## Other parameters:
+To modify when __troubleshooting__
 
-- __Spessore dei livelli__: più sottile = più dettagliato, più tempo
+- __Layer Width__: thinner = more detailed, slow print
 
-- __Temperatura estrusore__: 180°C per PLA e 220 °C per ABS
+- __Extruder Temperature__: Approx 180°C for PLA and 220 °C for ABS
 
-- __Velocità di stampa__: Generalmente più lento è meglio
+- __Print/Movement Speed__: Sometimes slowing down the speed can give better results.
 
-- ecc...
+- etc...
 <!-- .slide: data-background="img/problems.jpg" -->
 
 --
 
-### Software per Slicing
+## Slicing Software
+
+Each software gives different results
 
 - __Ultimaker Cura__
 
@@ -570,7 +577,7 @@ Da modificare in caso di problemi
 
 --
 
-### Printrun / Pronterface
+## Printrun / Pronterface
 Suite containing Printcore, Pronsole and Pronterface
 
 - Most used control software
@@ -583,7 +590,7 @@ Suite containing Printcore, Pronsole and Pronterface
 
 --
 
-### Repetier Host
+## Repetier Host
 - More recent that Printrun
 
 - Comes with its own firmware
@@ -596,7 +603,7 @@ Suite containing Printcore, Pronsole and Pronterface
 
 --
 
-### Octoprint / Octopi
+## Octoprint / Octopi
 The software runs on Raspberry Pi connected to the printer
 You send the jobs and control the printer via a web interface
 
@@ -613,17 +620,17 @@ You send the jobs and control the printer via a web interface
 # Finding models
 ## On the internet
 
-- __Thingiverse__: Backed by makerbot industries
+- [__Thingiverse__](https://www.thingiverse.com/): Backed by makerbot industries
 
-- __YouMagine__: Run my Ultimaker
+- [__YouMagine__](https://www.youmagine.com/): Run my Ultimaker
 
-- __Grabcad__: Meant for CAD model sharing, free community library
+- [__Grabcad__](https://grabcad.com/): Meant for CAD model sharing, free community library
 
-- __Shapeways__: shop of 3D printed objects, files often available
+- [__Shapeways__](http://www.shapeways.com/): shop of 3D printed objects, files often available
 
-- __Cults 3D__: Marketplace with a lot of free objects
+- [__Cults 3D__](https://cults3d.com/): Marketplace with a lot of free objects
 
-- __Sketchfab__: Has an online preview
+- [__Sketchfab__](https://sketchfab.com/): Has an online preview
 
 ---
 
@@ -640,7 +647,21 @@ You send the jobs and control the printer via a web interface
 
 ## Tinkercad
 
-Editor HTML5
+HTML5 based editor (only a browser needed)
+
+__Simple approach__ to modeling:
+
+- Start from basic shapes
+
+- Every shape can be a solid or a hole
+
+- You can group shapes to make new ones
+
+- Every shape can be scaled or cloned
+
+__Limited to 1mm__ precision
+
+<!-- .slide: data-background="img/tinkercad.jpg" -->
 
 --
 
@@ -663,7 +684,7 @@ Editor HTML5
 
 <img src="img/ccbysa.png" alt="License" style="width: 40%; border: 0;">
 
-Queste slides sono licenziate Creative Commons<br>
+These slides are licensed under Creative Commons<br>
 Attribution-ShareAlike 3.0 Unported
 
 ## [POUL.ORG](https://www.poul.org)

@@ -416,69 +416,76 @@ TODO: aggiungere fragments in giro
 --
 
 ## The workflow:
-- Modello 3D generico
-     Mesh repair: controllare le superfici <!-- .element: class="fragment" -->
-- STL: Formato 3D semplice e adatto alla stampa
-     Slicing: divisione in piani <!-- .element: class="fragment" -->
-- GCode: File contenente la sequenza di comandi per la stampa
-     Software Host: invia i comandi alla stampante <!-- .element: class="fragment" -->
+- Generic 3D Model
+     Mesh repair: Check for errors on the surface <!-- .element: class="fragment" -->
+- STL: Simple 3D format, suitable for 3D printing
+     Slicing: split the model to slices and decide how to print each slice <!-- .element: class="fragment" -->
+- GCode: File containing the sequence of commands for the printer
+     Host Software: Sends the commands to the printer <!-- .element: class="fragment" -->
 
 --
 
 ## Mesh repair
-#### es: NetFabb
+### es: NetFabb
 <br></br>
-- Verifica che la superficie dell'oggetto non abbia errori
+- Checks the __surface__ for __errors__ in the mesh,
+
+- If the model would have been (hipothetically) put under water,
+no water would have spilled inside it.
 <!-- .slide: data-background="img/meshfix.jpg" -->
 
 --
 
 ## Slicing
 <img src="img/slicing.png" alt="Slicing" style="width: 100%; border: 0;">
-- Seziona il modello in livelli
-- Decide come realizzare ogni livello
+- Slices the model to levels
+- Decides how to realize every level
 <br><br>
-### Alcuni parametri modificabili sono:
+#### You can set parameters like:
 
 --
 
-### Riempimento (infill):
-#### I modelli solidi vengono resi cavi, in questo modo:
+## Infill:
+#### Solid models are made hollow, such that:
 
-- Si usa __meno materiale__ di stampa
-- La stampa è __più veloce__
-- L'oggetto prodotto è __più leggero__
-- è possibile scegliere __trama__ e __percentuale__ di riempimento
+- __less material__ is used for the print
+- The print is __faster__
+- The final object __weights less__
+- It is possible to choose __shape__ and __percentage__ of the infill
 
 <!-- .slide: data-background="img/infill.jpg" -->
 
 --
 
-### Strutture di supporto
+## Support Structures
 
-- Rendono possibile stampare parti "sospese"
+- Are thin, break-away structures
 
-- Necessarie per superfici inclinate > 45°
+- They make printing __unsupported areas__ possible.
+
+- Generally necssary when printing surfaces at angles > 45°
 
 <!-- .slide: data-background="img/SupportGraphic.jpg" -->
 
 --
 
-### Altri parametri:
-Da modificare in caso di problemi
+## Other parameters:
+To modify when __troubleshooting__
 
-- __Spessore dei livelli__: più sottile = più dettagliato, più tempo
+- __Layer Width__: thinner = more detailed, slow print
 
-- __Temperatura estrusore__: 180°C per PLA e 220 °C per ABS
+- __Extruder Temperature__: Approx 180°C for PLA and 220 °C for ABS
 
-- __Velocità di stampa__: Generalmente più lento è meglio
+- __Print/Movement Speed__: Sometimes slowing down the speed can give better results.
 
-- ecc...
+- etc...
 <!-- .slide: data-background="img/problems.jpg" -->
 
 --
 
-### Software per Slicing
+## Slicing Software
+
+Each software gives different results
 
 - __Ultimaker Cura__
 
@@ -582,7 +589,7 @@ You send the jobs and control the printer via a web interface
 
 ## Tinkercad
 
-Editor HTML5
+HTML5 Editor
 
 --
 
@@ -605,7 +612,7 @@ Editor HTML5
 
 <img src="img/ccbysa.png" alt="License" style="width: 40%; border: 0;">
 
-Queste slides sono licenziate Creative Commons<br>
+These slides are licensed under Creative Commons<br>
 Attribution-ShareAlike 3.0 Unported
 
 ## [POUL.ORG](https://www.poul.org)

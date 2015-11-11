@@ -179,13 +179,13 @@ Architecture, Design, Mechanical parts
 
 ---
 
-# What
+# Some history
 
 --
 
-## Some history
+## The Beginnings
 
-- <!-- .element: class="fragment" --> *Additive manufactoring* invented in the 80s
+- *Additive manufactoring* invented in the 80s
 - 1984: Stereolitography <!-- .element: class="fragment" -->
 - STL: STereoLitography file format <!-- .element: class="fragment" -->
 - <!-- .element: class="fragment" --> `3D Printing`: because they started with inkjet print heads
@@ -260,7 +260,7 @@ A nice collateral effect is that unused powder supports the printing model.
 
 ## Some parallel history
 
-- <!-- .element: class="fragment" --> The RepRap project started as an initiative to develop a 3D printer that can *print most of its components*, being *open-hardware* and *low-cost*
+- The RepRap project started as an initiative to develop a 3D printer that can *print most of its components*, being *open-hardware* and *low-cost*
 - RepRap was founded in 2005 by Dr Adrian Bowyer, a Senior Lecturer in Mechanical Engineering at the University of Bath (UK) <!-- .element: class="fragment" -->
 
 --
@@ -276,7 +276,7 @@ A nice collateral effect is that unused powder supports the printing model.
 
 ## The present
 
-- 3D Printers have conquered the media attention <!-- .element: class="fragment" -->
+- 3D Printers have conquered the media attention
 - Several companies, using the RepRap lessons as a starting point, developed commercial products: Ultimaker, MakerBot <!-- .element: class="fragment" -->
 - <!-- .element: class="fragment" --> [Ultimaker good, MakerBot bad](http://richrap.blogspot.it/2014/06/makerbot-patents-and-open-source-3d.html)
 
@@ -284,7 +284,7 @@ A nice collateral effect is that unused powder supports the printing model.
 
 ## The future:
 
-- <!-- .element: class="fragment" --> [Fabtotum](http://www.fabtotum.com/)
+- <!-- .element: class="fragment" --> [**Fabtotum**](http://www.fabtotum.com/)
 - Other materials? <!-- .element: class="fragment" -->
 - ...Sustainable development in the developing world? <!-- .element: class="fragment" -->
 
@@ -387,14 +387,14 @@ Provides electrical insulation, radiation protection: used in aircraft, spacecra
 
 ## PLA
 
-- *What's that*: a bio-degradable polymer that can be produced from lactic acid, which can be fermented from crops such as maize.
-- Characteristics: harder than ABS, melts between 180°C and 220°C, but it exhibits more friction, which can make it more susceptible to extruder jams. <!-- .element: class="fragment" -->
+- *What's that*: a **bio-degradable** polymer that can be produced from lactic acid, which can be fermented from crops such as maize.
+- <!-- .element: class="fragment" --> *Characteristics*: harder than ABS, melts between 180°C and 220°C, but it exhibits more friction, which can make it more susceptible to extruder jams.
 
 --
 
 ## PLA: Printing
 
-- Ideal material for RepRaps: dimensionally stable, no heated bed required, cheap.
+- Ideal material for RepRaps: dimensionally stable, no heated bed required, **cheap**.
 - In general "easy" to print: low temps, little pressure necessary <!-- .element: class="fragment" -->
 - How: sticks well to the bed; you can print it directly on glass, better on Kapton Tape (add glue stick if necessary) <!-- .element: class="fragment" -->
 
@@ -403,7 +403,7 @@ Provides electrical insulation, radiation protection: used in aircraft, spacecra
 ## ABS
 
 - *What's that*: Acrylonitrile Butadiene Styrene (ABS), a common thermoplastic, light and easy to use (both molded and extruded).
-- Characteristics: better mechanical properties than other thermoplastics, less brittle than PLA, handles higher temperatures better. <!-- .element: class="fragment" -->
+- <!-- .element: class="fragment" --> *Characteristics*: better mechanical properties than other thermoplastics, less brittle than PLA, handles higher temperatures better.
 
 --
 
@@ -421,7 +421,7 @@ Provides electrical insulation, radiation protection: used in aircraft, spacecra
 ## Nylon
 
 - *What's that*: a polyamide, which is a polymer containing monomers of amides joined by peptide bonds
-- Practically, nylon <!-- .element: class="fragment" -->
+- <!-- .element: class="fragment" --> In practice, **nylon**
 - <!-- .element: class="fragment" --> Extremely strong. Like ABS, print in a **well-ventilated area**
 
 --
@@ -449,6 +449,10 @@ Provides electrical insulation, radiation protection: used in aircraft, spacecra
 
 <img src="img/supportmaterial.jpg" alt="Support" style="width: 80%; border: 0;">
 
+--
+
+<!-- .slide: data-background="img/catfall4.gif" -->
+
 ---
 
 <img src="img/questions.jpeg" alt="Questions" style="width: 50%; border: 0;">
@@ -463,6 +467,18 @@ Provides electrical insulation, radiation protection: used in aircraft, spacecra
 
 # Open Source Printing
 ## Software
+
+--
+
+## Firmware
+
+The control board is usually an Arduino. It translates the printing instructions in phisical movements.
+
+Of course it needs software to do that; so here's a <!-- .element: class="fragment" --> list: [reprap.org/wiki/Firmware](http://reprap.org/wiki/Firmware)
+
+Special <!-- .element: class="fragment" --> mention: [Marlin](http://reprap.org/wiki/Firmware#Marlin)
+
+
 
 ---
 
@@ -485,7 +501,6 @@ Provides electrical insulation, radiation protection: used in aircraft, spacecra
 ### es: NetFabb
 <br></br>
 - Checks the __surface__ for __errors__ in the mesh,
-
 - If the model would have been (hipothetically) put under water,
 no water would have spilled inside it.
 <!-- .slide: data-background="img/meshfix.jpg" -->
@@ -494,7 +509,7 @@ no water would have spilled inside it.
 
 ## Slicing
 <img src="img/slicing.png" alt="Slicing" style="width: 100%; border: 0;">
-- Slices the model to levels
+- Slices the model into levels
 - Decides how to realize every level
 <br><br>
 #### You can set parameters like:
@@ -516,12 +531,11 @@ no water would have spilled inside it.
 ## Support Structures
 
 - Are thin, break-away structures
-
 - They make printing __unsupported areas__ possible.
-
 - Generally necssary when printing surfaces at angles > 45°
 
-<!-- .slide: data-background="img/SupportGraphic.jpg" -->
+<!-- .slide: data-background="#000" -->
+<img src="img/SupportGraphic.jpg" alt="Slicing" style="width: 60%; border: 0;">
 
 --
 

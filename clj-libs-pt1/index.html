@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Practical Clojure libraries for busy backends - Clojure Finland Meetup #1</title>
+
+    <meta name="description" content="Introducing some goodness provided by the awesome Clojure Community">
+    <meta name="author" content="Fabrizio Ferrai">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- For syntax highlighting -->
+	<link rel="stylesheet" href="../reveal.js/highlight.js/src/styles/solarized-light.css" id="highlight-theme">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+
+  <style type="text/css">
+  .reveal pre code {
+    color: #3f3f3f;
+    background: #eee none repeat scroll 0% 0%;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    border-radius: .2em;
+  }
+
+  .fa {
+      margin-right: 1em;
+  }
+
+  #avatar{
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    margin-bottom: .8em;
+    width: 200px;
+    height: 200px;
+    border: 0px;
+    border-radius: 125px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+  }
+
+  #ferrai-io {
+      color: #373a3c;
+      letter-spacing: -3px;
+      font-size: 1em;
+  }
+
+  #software-engineer-hacker-consultant-br-music-lover-pythonist-clojure-disciple {
+      color: #373a3c;
+      letter-spacing: -2px;
+      font-size: .85em;
+      margin-bottom: 3em;
+  }
+
+  .personal-links {
+      display: inline-block;
+      text-align: left;
+  }
+
+  .personal-links h4 {
+      margin-bottom: .2em;
+  }
+
+  .personal-links h4 a {
+      color: #373a3c;
+      letter-spacing: -2px;
+  }
+
+  .personal-links h4 a:hover {
+      color: #373a3c;
+  }
+
+  .reveal blockquote h3 {
+      font-weight: 400;
+  }
+
+  </style>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Slides are separated by newline + three dashes + newline, vertical slides identical but two dashes -->
+			<section data-markdown data-separator="^\n---\n$"
+			         data-separator-vertical="^\n--\n$">
+				<script type="text/template">
+
+<!-- .slide: data-background="img/bg.jpg" -->
+
+### Finland Clojure Meetup #1
+
+<br/><br/>
+
+## Practical Clojure Libraries <br> for Busy Backends
+
+#### Fabrizio Ferrai
+
+<img src="img/clojure-logo.png" alt="Clojure" style="width: 20%; border: 0; box-shadow: none; margin-top: 3em; background: none">
+
+---
+
+<!-- .slide: data-background="img/bg.jpg" -->
+
+# Thank you!
+## This is awesome.
+
+---
+
+<!-- .slide: data-background="#babbab" -->
+
+<img src="img/avatar.png" alt="Fabrizio Ferrai" id="avatar"/>
+
+## <a id="ferrai-io" href="https://ferrai.io">ferrai.io</a>
+
+###### Software Engineer, Hacker, Consultant, <br> Music lover, Pythonist, Clojure disciple
+
+<div class="personal-links">
+    <h4><a href="https://twitter.com/fabferrai"><i class="fa fa-twitter"></i> @fabferrai</h4></a>
+    <h4><a href="https://github.com/ff-"><i class="fa fa-github-alt"></i> github.com/ff-</h4></a>
+    <h4><a href="mailto:fabrizio@ferrai.io"><i class="fa fa-envelope-o"></i> fabrizio@ferrai.io</h4></a>
+</div>
+
+---
+
+# Agenda
+
+<br/>
+
+* ### Real title of today's
+* ### Why you're doing this
+* ### Real stuff, code, blabla
+
+---
+
+<!-- .slide: data-background="#005b78" -->
+
+## `Statement 1`
+
+## Open Source is the best thing possible on the Earth.
+
+--
+
+# Real title
+## "Thank you people that open source your stuff and take care of it in the wild because you save a huge amount of time to everyone and you're amazing"
+
+---
+
+<!-- .slide: data-background="#a34328" -->
+
+## `Statement 2`
+
+## I have opinions on things, because reasons.
+
+--
+
+# #meta
+
+<br/>
+
+## Do you have an opinion on having opinions?
+
+--
+
+# Question yourself
+
+<br/>
+
+## "Do I really need to have an opinion on this?"
+
+--
+
+<!-- .slide: data-background="#cc0000" -->
+# NO.
+
+--
+
+# Question yourself
+
+<br/>
+
+## "I need to do shit in the best way possible in the less time possible. Can I have strong opinions on something?"
+
+--
+
+<!-- .slide: data-background="#00aa00" -->
+# YES!
+
+--
+
+### (But this is only my opinion.)
+
+---
+
+# OK, real meat
+
+--
+
+# Practical, lib, busy, backend <br />=<br /> DO STUFF FAST
+
+--
+
+TODO: fast in dev: easy to understand/read/getstarted, performance too
+
+---
+
+# I will tell a story.
+
+--
+
+## Meet Backy, our little young webserver.
+
+---
+
+Enduro
+
+---
+
+Logging
+
+--
+
+TODO: Mosconi
+
+TODO: Timbre
+
+---
+
+Cronj
+
+---
+
+Claypoole
+
+---
+
+Truss
+
+---
+
+<!-- .slide: data-background="#00aa00" -->
+<img src="img/success.jpeg" alt="Success"  class="stretch" style="width: 100%; border: 0;">
+
+---
+
+# Thank you!
+
+<img src="img/ccbysa.png" alt="License" style="width: 40%; border: 0;">
+
+These slides are licensed with Creative Commons<br>
+Attribution-ShareAlike 3.0 Unported
+
+## [ferrai.io](https://ferrai.io)
+
+          </script>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="../reveal.js/lib/js/head.min.js"></script>
+    <script src="../reveal.js/js/reveal.js"></script>
+
+    <script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: '../reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+
+  </script>
+
+  </body>
+</html>

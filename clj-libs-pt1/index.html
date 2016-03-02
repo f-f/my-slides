@@ -67,7 +67,7 @@
       font-size: 1em;
   }
 
-  #software-engineer-hacker-consultant-br-music-lover-pythonist-clojure-disciple {
+  #subtitle {
       color: #373a3c;
       letter-spacing: -2px;
       font-size: .85em;
@@ -124,6 +124,8 @@
 <!-- .slide: data-background="img/bg.jpg" -->
 
 # Thank you!
+### [Miika](https://twitter.com/zonpantli), [Metosin](https://twitter.com/metosin), everyone here
+<br />
 ## This is awesome.
 
 ---
@@ -134,13 +136,21 @@
 
 ## <a id="ferrai-io" href="https://ferrai.io">ferrai.io</a>
 
-###### Software Engineer, Hacker, Consultant, <br> Music lover, Pythonist, Clojure disciple
+<h6 id="subtitle"> Software Engineer, Hacker, Consultant, <br> Music lover, Pythonist, Clojure disciple</h6>
 
 <div class="personal-links">
-    <h4><a href="https://twitter.com/fabferrai"><i class="fa fa-twitter"></i> @fabferrai</h4></a>
-    <h4><a href="https://github.com/ff-"><i class="fa fa-github-alt"></i> github.com/ff-</h4></a>
-    <h4><a href="mailto:fabrizio@ferrai.io"><i class="fa fa-envelope-o"></i> fabrizio@ferrai.io</h4></a>
+    <h4><a href="https://twitter.com/fabferrai"><i class="fa fa-twitter"></i> @fabferrai</a></h4>
+    <h4><a href="https://github.com/ff-"><i class="fa fa-github-alt"></i> github.com/ff-</a></h4>
+    <h4><a href="mailto:fabrizio@ferrai.io"><i class="fa fa-envelope-o"></i> fabrizio@ferrai.io</a></h4>
 </div>
+
+--
+
+## [slides.ferrai.io/clj-libs-pt1](https://slides.ferrai.io/clj-libs-pt1)
+
+--
+
+<img src="img/nostupid.jpeg" alt="No stupid" style="width: 80%; border: 0;">
 
 ---
 
@@ -149,29 +159,30 @@
 <br/>
 
 * ### Real title of today's
-* ### Why you're doing this
+* ### Why we're doing this
+* ### A little story
 * ### Real stuff, code, blabla
 
 ---
 
 <!-- .slide: data-background="#005b78" -->
 
-## `Statement 1`
+## `Fact #1`
 
 ## Open Source is the best thing possible on the Earth.
 
 --
 
-# Real title
-## "Thank you people that open source your stuff and take care of it in the wild because you save a huge amount of time to everyone and you're amazing"
+# Real Today's Title
+## "Thank you people that open source your stuff and take care of it in the wild because you're amazing and you save a huge amount of time to everyone and you deserve love"
 
 ---
 
 <!-- .slide: data-background="#a34328" -->
 
-## `Statement 2`
+## `Disclaimer #1`
 
-## I have opinions on things, because reasons.
+## I may have opinions on things, because reasons.
 
 --
 
@@ -196,7 +207,7 @@
 
 --
 
-# Question yourself
+# Real Question
 
 <br/>
 
@@ -207,21 +218,29 @@
 <!-- .slide: data-background="#00aa00" -->
 # YES!
 
---
+# You should.
+## Because time.
+
+<br />
 
 ### (But this is only my opinion.)
 
 ---
 
+<!-- .slide: data-background="img/meat.jpg" -->
+
 # OK, real meat
 
 --
 
-# Practical, lib, busy, backend <br />=<br /> DO STUFF FAST
+## Practical, lib, busy, backend <br />= FAST STUFF
 
---
+<br />
 
-TODO: fast in dev: easy to understand/read/getstarted, performance too
+- easy to get started
+- easy on the eyes
+- easy to understand in context
+- "squeeze that CPU"
 
 ---
 
@@ -229,33 +248,168 @@ TODO: fast in dev: easy to understand/read/getstarted, performance too
 
 --
 
-## Meet Backy, our little young webserver.
+## Meet Backy, <br/>our little young webserver.
 
----
-
-Enduro
-
----
-
-Logging
+<img src="img/wat.png" alt="WAT" style="width: 40%; border: 0; box-shadow: none; margin-top: 1em; background: none">
 
 --
 
-TODO: Mosconi
+## OK scrap that, a potato will do.
 
-TODO: Timbre
+<img src="img/potato.png" alt="Potato!" style="width: 30%; border: 0; box-shadow: none; margin-top: 1em; background: none">
+
+"Potty"
+
+--
+
+# CODE!
+
+TODO: minimal http-kit app
+
+TODO: comments on the new things to do
+
+--
+
+## Our Potty is sad
+
+- Lots of different requests
+- Lots of different tasks
+- Don't know how to manage something
+- Needs better notes management
 
 ---
 
-Cronj
+# Easy persistence
+
+TODO: comic "where's my data?"
+
+--
+
+# [Enduro](https://github.com/alandipert/enduro)
+
+### Durable atoms in Clojure
+
+--
+
+TODO: archive for Potty
 
 ---
 
-Claypoole
+# Logging
+
+TODO: comic with "how did you get this? I don't know."
+
+--
+
+TODO: Explain printf and Mosconi
+
+--
+
+<img src="img/mosconi.jpg" alt="Mosconi"  class="stretch" style="width: 85%; border: 0;">
+
+--
+
+TODO: Logging is printf debugging, but in production
+
+--
+
+# [Timbre](https://github.com/ptaoussanis/timbre)
+
+### Pure Clojure/Script logging library
+
+<br/>
+
+(Best logging library, ever.)
+
+--
+
+TODO: book for potty. Or twitter?
 
 ---
 
-Truss
+# Scheduling
+
+TODO: comic "S#*t I woke up late"
+
+--
+
+## Totally partial list of Reasons for using Clojure to do cron
+
+<br />
+
+- Library goodies
+- Application goodies
+- Systemd
+
+--
+
+TODO: comparison of scheduling libs
+
+Check: http://z.caudate.me/immutability-time-and-task-schedulers/
+
+--
+
+# [Cronj](https://github.com/zcaudate/cronj)
+
+### A cron-inspired task scheduling library
+
+--
+
+TODO: comic alarm clock
+
+---
+
+# Parallelizing
+
+TODO: render 43787638 images - you have one process
+
+--
+
+## "But hey, we got `pmap` right?"
+
+--
+
+TODO: explain why pmap is broken*
+
+<br />
+
+*I mean counterintuitive
+
+--
+
+# [Claypoole](https://github.com/TheClimateCorporation/claypoole)
+
+### Threadpool tools for Clojure
+
+---
+
+# Testing
+
+TODO: comic "This is not a number..."
+
+--
+
+## Let's face it, testing is boring.*
+
+<br />
+
+*but necessary
+
+--
+
+TODO: comparison with assertions, why it works
+
+--
+
+# [Truss](https://github.com/ptaoussanis/truss)
+
+### Assertions API for Clojure/Script
+
+---
+
+# Happy Ending
+
+TODO: happy backend
 
 ---
 

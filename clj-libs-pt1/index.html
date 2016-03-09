@@ -39,9 +39,14 @@
   .reveal pre code {
     color: #3f3f3f;
     background: #eee none repeat scroll 0% 0%;
-    font-size: 1.5em;
-    line-height: 1.4em;
+    font-size: 1.3em;
+    line-height: 1.3em;
     border-radius: .2em;
+    max-height: 600px;
+  }
+
+  .reveal pre {
+      width: 100%;
   }
 
   .fa {
@@ -154,6 +159,14 @@
 
 --
 
+### "It seemed impossible but we did it"
+
+<iframe id="player" type="text/html" width="100%" height="600px"
+  src="https://www.youtube.com/embed/aVinOrHwUdk"
+  frameborder="0"></iframe>
+
+--
+
 <img src="img/nostupid.jpeg" alt="No stupid" style="width: 80%; border: 0;">
 
 ---
@@ -163,7 +176,7 @@
 <br/>
 
 * ### Real title of today's
-* ### Real stuff, code, blablabla
+* ### Stuff, code, blablabla
 
 ---
 
@@ -181,6 +194,8 @@
 ---
 
 # Why we're <br />doing this
+
+TODO: refactor this
 
 --
 
@@ -278,8 +293,6 @@
 
 # CODE!
 
-TODO: minimal http-kit app
-
 TODO: comments on the new things to do
 
 --
@@ -287,7 +300,7 @@ TODO: comments on the new things to do
 <!-- .slide: data-background="#444" -->
 
 ## Our Potty is sad
-
+TODO: better here
 - Lots of different requests
 - Lots of different tasks
 - Don't know how to manage something
@@ -309,6 +322,97 @@ TODO: comments on the new things to do
 
 ### Durable atoms in Clojure
 
+--
+
+## [Implementing it](http://www.brandonbloom.name/blog/2013/06/26/slurp-and-spit/)
+
+```clojure
+(import 'java.io.File)
+
+(def db (atom {}))
+(def save-agent (agent nil))
+
+(defn load-data []
+  (reset! db (read-string (slurp "somefile"))))
+
+(defn save-data []
+ (send-off save-agent
+   (fn [_]
+     (spit "somefile.tmp" (prn-str @db))
+     (.renameTo (File. "somefile.tmp") (File. "somefile")))))
+```
+
+--
+
+## Postgres #1
+
+```clojure
+(ns your-ns
+  (:require [alandipert.enduro :as e]
+            [alandipert.enduro.pgsql :as pg]
+            [clojure.java.jdbc :as sql])
+
+(defn db-config []
+  (or (System/getenv "DATABASE_URL")
+      "postgresql://localhost:5432/your-db"))
+
+;; We wrap the atom in a delay to prevent a connection attempt during
+;; ahead-of-time compilation, as enduro atoms attempt to commit their
+;; initialization value as soon as they are created.
+
+(def addresses
+  (delay
+   (pg/postgresql-atom
+    {}
+    (db-config)
+    "enduro")))
+```
+
+--
+
+## Postgres #2
+
+```clojure
+(e/swap! @addresses assoc "Spongebob" "124 Conch Street")
+
+;; To see the atom's value, it must be dereferenced twice to account
+;; for the delay.
+
+@@addresses ;=> {"Spongebob" "124 Conch Street"}
+
+;; You can inspect the table enduro is using with clojure.java.jdbc.
+
+(sql/with-connection (db-config)
+  (sql/with-query-results rows
+    [(str "SELECT value FROM enduro LIMIT 1")]
+    (read-string (:value (first rows)))))
+
+;=> {"Spongebob" "124 Conch Street"}
+```
+
+--
+
+## Caveats
+
+- Writes the entire atom contents on every swap!, so writes are very slow compared to a real database.
+- Enduro atoms must fit in memory. Use with very small data only.
+- No prevention of allocating the same resource to multiple atoms. Handle your dragons.
+
+--
+
+## Similar projects
+
+- [Exoref](https://github.com/lantiga/exoref) - Redis
+- [Faraday](https://github.com/mixradio/faraday-atom) - DynamoDB
+- [Zookeeper-atom](https://github.com/torsten/zookeeper-atom) - Zookeeper
+
+<br />
+
+## And of course...
+
+- [Datascript](https://github.com/tonsky/datascript) - not persistent, Datalog
+- [Datomic](http://www.datomic.com/) - persistent with different backends, Datalog
+
 ---
 
 <!-- .slide: data-background="#fff" -->
@@ -319,7 +423,29 @@ TODO: comments on the new things to do
 
 --
 
-TODO: Explain printf and Mosconi
+
+> Do I need logging?
+>
+>
+> -- <cite>You</cite>
+
+Remember when learning to program stuff was blowing up?
+
+--
+
+## `printf()` debugging
+
+<br />
+
+```clojure
+(do
+  (possibly-failing-computation-1)
+  (println "Dio")
+  (possibly-failing-computation-2)
+  (println "Madonna"))
+```
+
+And they said: this is bad, use a debugger
 
 --
 
@@ -327,7 +453,7 @@ TODO: Explain printf and Mosconi
 
 --
 
-TODO: Logging is printf debugging, but in production
+## Logging is "printf debugging", but in production
 
 --
 
@@ -338,6 +464,70 @@ TODO: Logging is printf debugging, but in production
 <br/>
 
 (Best logging library, ever.)
+
+--
+
+## Timbre is awesome because:
+
+- it has sane defaults
+- import and you're ready to log, which is the best
+- configuration is dead simple
+- but powerful
+
+--
+
+## Hacks #1
+
+```clojure
+(def log-file-name "my.log")
+(timbre/merge-config!
+  {:appenders {:spit   (appenders/spit-appender {:fname log-file-name})
+               :postal (postal-appender/postal-appender
+                         ^{:host (System/getenv "POSTAL_HOST")
+                           :user (System/getenv "POSTAL_USER")
+                           :pass (System/getenv "POSTAL_PASSWORD")
+                           :port 587 :tls true}
+                         {:from (System/getenv "POSTAL_FROM")
+                          :to   (System/getenv "POSTAL_TO")})}
+   :output-fn (fn [data]
+                (timbre/default-output-fn
+                  {:stacktrace-fonts {}}
+                  (assoc data :msg_ (str (.toString (Thread/currentThread)) " "
+                                         (force (:msg_ data))))))})
+```
+
+--
+
+## Hacks #2
+
+```clojure
+(def log-file-name  "./data/standard.log")
+(def hist-file-name "./data/history.log")
+;; One standard logger, and one for history
+;; HACK: REPORT level (the higher) is reserved for history,
+;; don't use for other. It gets printed only in the history logger,
+;; while ignored in the others.
+(timbre/merge-config!
+ {:appenders
+  {:spit    (assoc
+              (appenders/spit-appender {:fname log-file-name})
+              :fn (fn [data]
+                    (when-not (= (:level data) :report)
+                      ((:fn (appenders/spit-appender {:fname log-file-name}))
+                       data))))
+   :history (assoc
+              (appenders/spit-appender {:fname hist-file-name})
+              :min-level :report)}})
+;; No colors plz, and better (sortable!) timestamps
+(timbre/merge-config! {:output-fn (partial timbre/default-output-fn
+                                           {:stacktrace-fonts {}})
+                       :timestamp-opts {:pattern "yyyy-MM-dd HH:mm:ss"}})
+
+```
+
+--
+
+## Freebie: profiling
 
 ---
 

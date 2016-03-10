@@ -184,7 +184,13 @@
 
 ## `Fact #1`
 
-## Open Source is the best thing possible on the Earth.
+## Open Source is one of the best things possible on the Earth.
+
+--
+
+## [Github repositories over time](https://github.com/blog/1724-10-million-repositories)
+
+<img src="img/github-repositories.png" alt="Repos" class="stretch" style="width: 100%; border: 0;">
 
 --
 
@@ -195,77 +201,45 @@
 
 # Why we're <br />doing this
 
-TODO: refactor this
+--
+
+<!-- .slide: data-background="#005b78" -->
+
+## `Fact #2`
+
+## It's OK to have opinions.
 
 --
 
-<!-- .slide: data-background="#a34328" -->
-
-## `Disclaimer #1`
-
-## I may have opinions on things, because reasons.
+## "I need to do shit in the best way possible in the less time possible. Should I have opinions on my tools?"
 
 --
-
-# #meta
-
-<br/>
-
-## Do you have an opinion on having opinions?
-
---
-
-# Question yourself
-
-<br/>
-
-## "Do I really need to have an opinion on this?"
-
---
-
-<!-- .slide: data-background="#cc0000" -->
-# NO.
-
---
-
-# Real Question
-
-<br/>
-
-## "I need to do shit in the best way possible in the less time possible. Can I have strong opinions on something?"
-
---
-
-<!-- .slide: data-background="#00aa00" -->
-# YES!
-
-# You should.
-## Because time.
-
-<br />
-
-### (But this is only my opinion.)
-
----
 
 <!-- .slide: data-background="img/meat.jpg" -->
-
-# OK, real meat
-
---
 
 ## Practical, lib, busy, backend <br />= FAST STUFF
 
 <br />
 
 - easy to get started
+- idiomatic - "clojurish"
 - easy on the eyes
 - easy to understand in context
-- "squeeze that CPU"
+- performances would be nice too
+
+--
+
+## Today's libs
+
+- Enduro
+- Timbre
+- Cronj
+- Claypoole
+- Truss
 
 ---
 
-# I will tell a story.
+# Little fake story
 
 --
 
@@ -293,20 +267,19 @@ TODO: refactor this
 
 # CODE!
 
-TODO: comments on the new things to do
-
 --
 
 <!-- .slide: data-background="#444" -->
 
 ## Our Potty is sad
-TODO: better here
-- Lots of different requests
-- Lots of different tasks
-- Don't know how to manage something
-- Needs better notes management
 
-<img src="img/potato-sad.png" alt="Potato!" style="width: 50%; border: 0; box-shadow: none; margin-top: 1em; background: none">
+- No persistence
+- Don't know what's going on
+- Doesn't do much either
+
+<img src="img/potato-sad.png" alt="Potato!" style="width: 40%; border: 0; box-shadow: none; margin-top: 1em; background: none">
+
+*Hey, I'm a software engineer and not a painter for a reason.
 
 ---
 
@@ -344,59 +317,18 @@ TODO: better here
 
 --
 
-## Postgres #1
-
-```clojure
-(ns your-ns
-  (:require [alandipert.enduro :as e]
-            [alandipert.enduro.pgsql :as pg]
-            [clojure.java.jdbc :as sql])
-
-(defn db-config []
-  (or (System/getenv "DATABASE_URL")
-      "postgresql://localhost:5432/your-db"))
-
-;; We wrap the atom in a delay to prevent a connection attempt during
-;; ahead-of-time compilation, as enduro atoms attempt to commit their
-;; initialization value as soon as they are created.
-
-(def addresses
-  (delay
-   (pg/postgresql-atom
-    {}
-    (db-config)
-    "enduro")))
-```
-
---
-
-## Postgres #2
-
-```clojure
-(e/swap! @addresses assoc "Spongebob" "124 Conch Street")
-
-;; To see the atom's value, it must be dereferenced twice to account
-;; for the delay.
-
-@@addresses ;=> {"Spongebob" "124 Conch Street"}
-
-;; You can inspect the table enduro is using with clojure.java.jdbc.
-
-(sql/with-connection (db-config)
-  (sql/with-query-results rows
-    [(str "SELECT value FROM enduro LIMIT 1")]
-    (read-string (:value (first rows)))))
-
-;=> {"Spongebob" "124 Conch Street"}
-```
-
---
-
 ## Caveats
 
 - Writes the entire atom contents on every swap!, so writes are very slow compared to a real database.
 - Enduro atoms must fit in memory. Use with very small data only.
 - No prevention of allocating the same resource to multiple atoms. Handle your dragons.
+
+<br />
+
+## When to use
+
+- Sketching out a project
+- Low-memory environments
 
 --
 
@@ -437,12 +369,17 @@ Remember when learning to program stuff was blowing up?
 
 <br />
 
-```clojure
-(do
-  (possibly-failing-computation-1)
-  (println "Dio")
-  (possibly-failing-computation-2)
-  (println "Madonna"))
+```c
+#include <stdio.h>
+
+...
+
+int main () {
+    possibly_failing_computation_1();
+    printf("Dio \n");
+    possibly_failing_computation_2();
+    printf("Madonna \n");
+}
 ```
 
 And they said: this is bad, use a debugger
@@ -492,8 +429,9 @@ And they said: this is bad, use a debugger
    :output-fn (fn [data]
                 (timbre/default-output-fn
                   {:stacktrace-fonts {}}
-                  (assoc data :msg_ (str (.toString (Thread/currentThread)) " "
-                                         (force (:msg_ data))))))})
+                  (assoc data :msg_
+                    (str (.toString (Thread/currentThread)) " "
+                         (force (:msg_ data))))))})
 ```
 
 --
@@ -539,7 +477,7 @@ And they said: this is bad, use a debugger
 
 --
 
-## Totally partial list of Reasons for using Clojure to do cron
+## Totally partial list of reasons for using Clojure to do cron
 
 <br />
 
@@ -549,15 +487,54 @@ And they said: this is bad, use a debugger
 
 --
 
-TODO: comparison of scheduling libs
+## [Tons of scheduling libs](http://z.caudate.me/immutability-time-and-task-schedulers/)
 
-Check: http://z.caudate.me/immutability-time-and-task-schedulers/
+- [at-at](https://github.com/overtone/at-at)
+- [chime](https://github.com/james-henderson/chime)
+- [clj-cronlike](https://github.com/kognate/clj-cronlike)
+- [cron4j](http://www.sauronsoftware.it/projects/cron4j)
+- [monotony](https://github.com/aredington/monotony)
+- [quartzite](https://github.com/michaelklishin/quartzite)
+- [schejulure](https://github.com/AdamClements/schejulure)
+- [cronj](https://github.com/zcaudate/cronj)
+
+<br />
+
+```clojure
+(use 'overtone.at-at)
+(def my-pool (mk-pool))
+(at (+ 1000 (now)) #(println "hello from the past!") my-pool)
+```
 
 --
 
 # [Cronj](https://github.com/zcaudate/cronj)
 
 ### A cron-inspired task scheduling library
+
+--
+
+## Design
+
+Main concept is *task*, composed by a *handler* and a *schedule*.
+
+*Scheduler* is notified of the current time by a *timer*, triggers tasks.
+
+Handler is just a function:
+```clojure
+(fn [t opts]
+    (your-task-here))
+```
+
+--
+
+## Why it's awesome
+
+- Really cron-like
+- Manually triggered tasks if needed
+- Multiple threads running
+- Pre/Post hooks
+- Simulations!
 
 ---
 
@@ -573,11 +550,50 @@ Check: http://z.caudate.me/immutability-time-and-task-schedulers/
 
 --
 
-TODO: explain why pmap is broken*
+### But `pmap` is <del>*awesome*</del> counterintuitive.
+
+- Waits for the slowest computation
+- Parallelization overhead
+
+<img src="img/pmap-small-grain.png" alt="pmap" style="width: 50%; border: 0; box-shadow: none; margin-top: 1em; background: white">
 
 <br />
 
-*I mean counterintuitive
+[Great presentation by David Edgar Liebke](http://incanter.org/downloads/fjclj.pdf)
+
+--
+
+## Solution #1: [`ppmap`](http://www.braveclojure.com/zombie-metaphysics/)
+
+```clojure
+(defn ppmap [f partition-size coll]
+  (->> coll
+       (partition-all partition-size) ; Partition into chunks.
+       (pmap (comp doall              ; Map f over each chunk,
+                   (partial map f)))  ; and use doall to force it to be
+                                      ; realized in the worker thread.
+       (apply concat)))               ; Concatenate the chunked results
+                                      ; to form the return value.
+```
+
+<img src="img/ppmap.png" alt="pmap" style="width: 50%; border: 0; box-shadow: none; margin-top: 1em; background: white">
+
+--
+
+## Solution #2: [reducers](http://clojure.org/reference/reducers)
+
+```
+(def l (range 10000000))
+
+(time (def a (doall (pmap #(* % %) l))))
+"Elapsed time: 14674.415781 msecs"
+
+(time (def a (doall (map #(* % %) l))))
+"Elapsed time: 1119.107447 msecs"
+
+(time (def a (doall (into [] (r/map #(* % %) l)))))
+"Elapsed time: 1049.754652 msecs"
+```
 
 --
 
@@ -585,25 +601,66 @@ TODO: explain why pmap is broken*
 
 ### Threadpool tools for Clojure
 
+--
+
+## Improvements over `pmap`
+
+- set the size of the threadpool ->> tunable for non-CPU-bound tasks like network requests
+- share a threadpool between multiple pmaps
+- eagerly streaming rather than lazy
+- unordered pmap ->> handle the first response as fast as possible
+
+--
+
+## Best example
+
+```clojure
+(->> image-urls
+     ;; Put the URL in a map.
+     (map (fn [url] {:url url}))
+     ;; Add the image data to the map.
+     (cp/upmap network-pool
+               #(assoc % :data
+                       (-> % :url clj-http.client/get :body)))
+     ;; Add the resized image to the map.
+     (cp/upmap cpu-pool
+               #(assoc % :resized (resize (:data %)))))
+```
+
+
 ---
 
 <!-- .slide: data-background="#fff" -->
 
-# Testing <!-- .element: class="potty" -->
+# Asserting <!-- .element: class="potty" -->
 
 <img src="img/potato-nan.png" alt="Potato!" style="width: 60%; border: 0; box-shadow: none; margin-top: 1em; background: none">
 
 --
 
-## Let's face it, testing is boring.*
+### Let's face it, testing is necessary*
+### ...but often it's not enough.
 
 <br />
 
-*but necessary
+*but boring
 
 --
 
-TODO: comparison with assertions, why it works
+### Undocumented type assumptions
+
+- `NullPointerException` anyone?
+- HELPFUL stack traces.
+
+--
+
+## Solutions
+
+- Comments?
+- Unit tests?
+- [core.typed](https://github.com/clojure/core.typed)
+- [@plumatic/schema](https://github.com/plumatic/schema)
+- [Truss](https://github.com/ptaoussanis/truss)
 
 --
 
